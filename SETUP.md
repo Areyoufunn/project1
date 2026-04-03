@@ -26,10 +26,16 @@
 ### Dev 2 — Frontend
 | Software | Versi | Cara Install |
 |---|---|---|
-| Node.js | v18+ | https://nodejs.org |
-| Expo CLI | Latest | `npm install -g expo-cli` |
-| Android Studio | Latest | Untuk emulator Android |
-| Expo Go App | Latest | Install di HP dari Play Store / App Store |
+| Flutter SDK | 3.x (stable) | https://flutter.dev/docs/get-started/install |
+| Android Studio | Latest | https://developer.android.com/studio |
+| Dart SDK | 3.x | Sudah bundled dengan Flutter |
+| Node.js | v18+ | https://nodejs.org (untuk Next.js admin) |
+
+> 💡 **Cara cepat install Flutter di Windows:**
+> 1. Download Flutter SDK dari https://flutter.dev
+> 2. Extract ke `C:\flutter`
+> 3. Tambahkan `C:\flutter\bin` ke Environment Variables → PATH
+> 4. Jalankan `flutter doctor` untuk cek semua sudah benar
 
 ---
 
@@ -179,64 +185,99 @@ GET http://localhost:8000/api/health
 
 ---
 
-## 📱 3. Setup Frontend Mobile — React Native / Expo (Dev 2)
+## 📱 3. Setup Frontend Mobile — Flutter (Dev 2)
 
-### Langkah 1: Buat Project Expo
+### Langkah 1: Verifikasi Flutter Terinstall
+
+```bash
+# Cek instalasi Flutter
+flutter doctor
+
+# Semua harus ✅ kecuali iOS (kalau tidak punya Mac)
+# Android toolchain, connected device, dan VS Code harus OK
+```
+
+### Langkah 2: Buat Project Flutter
 
 ```bash
 # Di dalam folder eduflow/
-npx create-expo-app mobile --template blank-typescript
+flutter create mobile
 cd mobile
 ```
 
-### Langkah 2: Install Dependencies
+### Langkah 3: Install Dependencies
 
-```bash
-# Navigation
-npx expo install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
-npx expo install react-native-screens react-native-safe-area-context
+Edit `pubspec.yaml` dan tambahkan dependencies berikut:
 
-# HTTP Client
-npm install axios
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
 
-# Video Player (TikTok-style)
-npx expo install expo-video
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
 
-# Audio Recording (untuk voice note)
-npx expo install expo-av
+  # HTTP Client
+  dio: ^5.4.3
 
-# Secure Storage (simpan token)
-npx expo install expo-secure-store
+  # Navigation
+  go_router: ^13.2.0
 
-# Notifications
-npx expo install expo-notifications
+  # Video Player (TikTok-style)
+  video_player: ^2.8.3
+  chewie: ^1.8.1
 
-# UI Components
-npm install @shopify/flash-list
-npm install react-native-reanimated
+  # Audio Recording (Voice Note)
+  record: ^5.1.1
+
+  # Secure Storage (simpan token)
+  flutter_secure_storage: ^9.0.0
+
+  # Animasi Lottie (XP, badge)
+  lottie: ^3.1.0
+
+  # Push Notification
+  flutter_local_notifications: ^17.1.2
+
+  # Image caching
+  cached_network_image: ^3.3.1
 ```
 
-### Langkah 3: Konfigurasi API URL
+Lalu jalankan:
 
-Buat file `mobile/src/config/api.ts`:
+```bash
+flutter pub get
+```
 
-```typescript
-export const API_BASE_URL = __DEV__
-  ? 'http://192.168.x.x:8000/api'  // Ganti dengan IP local komputer Dev 1
-  : 'https://api.eduflow.id/v1';
+### Langkah 4: Konfigurasi API URL
+
+Buat file `mobile/lib/config/api_config.dart`:
+
+```dart
+class ApiConfig {
+  // Ganti dengan IP lokal komputer Dev 1 saat development
+  static const String baseUrl = String.fromEnvironment(
+    'API_URL',
+    defaultValue: 'http://192.168.x.x:8000/api',
+  );
+}
 ```
 
 > ⚠️ Gunakan **IP lokal** (bukan localhost) agar HP fisik bisa connect ke backend.
 > Cari IP: jalankan `ipconfig` di terminal → cari IPv4 Address
 
-### Langkah 4: Jalankan
+### Langkah 5: Jalankan
 
 ```bash
-# Jalankan Expo
-npx expo start
+# Pastikan HP/emulator sudah connect
+flutter devices
 
-# Scan QR code dengan Expo Go app di HP
-# ATAU tekan 'a' untuk jalankan di Android emulator
+# Jalankan ke device
+flutter run
+
+# Atau spesifik ke Android emulator
+flutter run -d emulator-5554
 ```
 
 ---

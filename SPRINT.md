@@ -2,7 +2,7 @@
 
 > Tim: 2 Vibe Developer (AI-assisted)
 > **Dev 1** → Backend (Laravel API + AI Integration)
-> **Dev 2** → Frontend (React Native Mobile + Next.js Admin)
+> **Dev 2** → Frontend (Flutter Mobile + Next.js Admin)
 > Estimasi Total: **~5 Minggu** ke Beta siap test
 
 ---
@@ -11,8 +11,8 @@
 
 | Layer | Dev 1 (Backend) | Dev 2 (Frontend) |
 |---|---|---|
-| **Tools** | Laravel, MySQL, Redis, OpenAI API | React Native, Next.js, Axios |
-| **Output** | REST API endpoints | Screens & UI components |
+| **Tools** | Laravel, MySQL, Redis, OpenAI API | Flutter (Dart), Next.js, Dio |
+| **Output** | REST API endpoints | Screens & UI widgets |
 | **Interface** | `API.md` sebagai kontrak | `API.md` sebagai referensi |
 
 > 💡 **Aturan Tim:**
@@ -39,14 +39,14 @@
 - [ ] Seeder: 1 developer, 3 invite code sample
 
 ### Dev 2 — Frontend
-- [ ] Setup React Native project (Expo)
+- [ ] Setup Flutter project (`flutter create mobile`)
 - [ ] Setup Next.js project untuk admin web
-- [ ] Setup Axios + interceptor auth token
-- [ ] Screen: Splash / Onboarding
-- [ ] Screen: Login (mobile)
-- [ ] Screen: Register + input invite code (mobile)
+- [ ] Setup Dio + interceptor auth token di Flutter
+- [ ] Screen: Splash / Onboarding (Flutter)
+- [ ] Screen: Login (Flutter)
+- [ ] Screen: Register + input invite code (Flutter)
 - [ ] Halaman: Login admin (Next.js)
-- [ ] Navigasi dasar per role setelah login
+- [ ] Navigasi go_router per role setelah login
 
 ### ✅ Definisi Selesai Sprint 1
 > User bisa daftar pakai invite code, login, dan diarahkan ke dashboard sesuai role.
@@ -74,7 +74,7 @@
 - [ ] Next.js: Creator Dashboard — list konten + status badge
 - [ ] Next.js: Creator — upload video per chapter
 - [ ] Next.js: Creator — halaman detail konten (lihat feedback jika ditolak)
-- [ ] Mobile: Screen explore roadmap (dummy data dulu)
+- [ ] Flutter: Screen explore roadmap (dummy data dulu menggunakan Riverpod mock)
 
 ### ✅ Definisi Selesai Sprint 2
 > Developer bisa buat roadmap + chapter, creator bisa upload video, AI mereview, developer approve/reject.
@@ -98,15 +98,15 @@
 - [ ] Endpoint polling status voice note (`GET /voice-notes/{id}`)
 
 ### Dev 2 — Frontend
-- [ ] Mobile: Screen explore roadmap (real API)
-- [ ] Mobile: Detail roadmap → tombol enroll
-- [ ] Mobile: Feed belajar TikTok-style (swipe vertikal, fullscreen video)
-- [ ] Mobile: Overlay XP + badge setelah chapter selesai
-- [ ] Mobile: Trigger dan Screen voice note recording
-- [ ] Mobile: Progress bar upload + status processing
-- [ ] Mobile: Screen hasil scoring voice note (skor + feedback LLM)
-- [ ] Mobile: Tombol "Laporkan Masalah" (beta feedback, semua layar)
-- [ ] Mobile: Notifikasi streak reminder (local notification)
+- [ ] Flutter: Screen explore roadmap (real API via Dio)
+- [ ] Flutter: Detail roadmap → tombol enroll
+- [ ] Flutter: Feed belajar TikTok-style (PageView vertikal fullscreen + video_player)
+- [ ] Flutter: Overlay XP + animasi Lottie setelah chapter selesai
+- [ ] Flutter: Screen voice note recording (record package + custom waveform painter)
+- [ ] Flutter: Progress bar upload + status processing (polling via Riverpod)
+- [ ] Flutter: Screen hasil scoring voice note (skor + feedback LLM)
+- [ ] Flutter: Tombol "Laporkan Masalah" (beta feedback, semua layar)
+- [ ] Flutter: Notifikasi streak reminder (flutter_local_notifications)
 
 ### ✅ Definisi Selesai Sprint 3
 > Siswa bisa enroll roadmap, tonton konten, rekam voice note, terima skor, dan unlock chapter berikutnya.
@@ -128,11 +128,11 @@
 - [ ] Webhook handler: Whisper done + LLM done (async queue)
 
 ### Dev 2 — Frontend
-- [ ] Mobile: Dashboard siswa (XP, streak, rata-rata skor, kelemahan)
+- [ ] Flutter: Dashboard siswa (XP, streak, rata-rata skor, kelemahan)
 - [ ] Next.js: Analytics developer (grafik dropout per chapter, avg score)
 - [ ] Next.js: Analytics creator (views, completion rate, avg VN score)
-- [ ] Mobile + Web: Polish UI keseluruhan
-- [ ] Mobile: Animasi XP naik, badge unlock, streak
+- [ ] Flutter + Next.js: Polish UI keseluruhan
+- [ ] Flutter: Animasi XP naik (Lottie), badge unlock animasi, streak fire effect
 - [ ] Testing end-to-end semua flow
 - [ ] Bug fixing
 
@@ -192,7 +192,7 @@ Saat minta AI generate kode, sertakan konteks:
 ### Dev 2 — Frontend Prompts
 Saat minta AI generate kode, sertakan konteks:
 - File `API.md` → endpoint yang akan dipanggil
-- Contoh: *"Buatkan React Native screen untuk menampilkan feed TikTok-style, konsumsi endpoint GET /student/feed/{chapter_id} dengan format response berikut: ..."*
+- Contoh: *"Buatkan Flutter screen feed_screen.dart untuk TikTok-style feed, gunakan PageView vertikal, package video_player + chewie, Riverpod untuk state, konsumsi endpoint GET /student/feed/{chapter_id} dengan format response berikut: ..."*
 
 > 💡 Semakin detail konteks yang dikasih ke AI,
 > semakin akurat kode yang dihasilkan.

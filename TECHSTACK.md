@@ -10,7 +10,7 @@
 ```
 ┌─────────────────────────────────────────────────────┐
 │                    CLIENTS                          │
-│  📱 Mobile (React Native)  🌐 Web Admin (Next.js)  │
+│  📱 Mobile (Flutter)       🌐 Web Admin (Next.js)  │
 └─────────────────┬───────────────────┬───────────────┘
                   │   REST API        │
 ┌─────────────────▼───────────────────▼───────────────┐
@@ -56,26 +56,29 @@
 
 ---
 
-### 🔵 Mobile App — React Native + Expo (TypeScript)
+### 🔵 Mobile App — Flutter (Dart)
 
 | Komponen | Teknologi | Versi |
 |---|---|---|
-| Framework | React Native + Expo | SDK 51 |
-| Language | TypeScript | 5.x |
-| Navigation | React Navigation v6 | latest |
-| HTTP Client | Axios | latest |
-| Video Player | expo-video | latest |
-| Audio Record | expo-av | latest |
-| Storage Token | expo-secure-store | latest |
-| List Performa | @shopify/flash-list | latest |
-| Animasi | react-native-reanimated | latest |
-| Notifikasi | expo-notifications | latest |
+| Framework | Flutter | 3.x (stable) |
+| Language | Dart | 3.x |
+| State Management | Riverpod | latest |
+| HTTP Client | Dio | latest |
+| Video Player | video_player + chewie | latest |
+| Audio Record | record | latest |
+| Auth Token Storage | flutter_secure_storage | latest |
+| Animasi Lottie | lottie | latest |
+| Notifikasi | flutter_local_notifications | latest |
+| Image Caching | cached_network_image | latest |
+| Navigation | go_router | latest |
 
-**Kenapa React Native + Expo?**
-- ✅ TypeScript = type-safe, AI generate lebih akurat
-- ✅ Expo = tidak perlu konfigurasi native (Android/iOS)
-- ✅ `expo-av` = voice recording built-in
-- ✅ `expo-video` = video player performa tinggi
+**Kenapa Flutter?**
+- ✅ **Performa terbaik** untuk TikTok-style feed — animasi 60fps smooth
+- ✅ **Dart = sangat AI-friendly**, syntax bersih dan mudah di-generate
+- ✅ `record` package = voice recording native di Android & iOS
+- ✅ `video_player` = video playback performa tinggi
+- ✅ `Riverpod` = state management modern, testable
+- ✅ Animasi XP, badge, waveform jauh lebih smooth vs React Native
 - ✅ Satu codebase → Android + iOS sekaligus
 
 ---
@@ -94,11 +97,11 @@
 | Icons | lucide-react | latest |
 | Auth Storage | js-cookie | latest |
 
-**Kenapa Next.js?**
-- ✅ TypeScript = sama dengan mobile, satu bahasa frontend
+**Kenapa Next.js (bukan Flutter Web)?**
+- ✅ Flutter Web tidak ideal untuk tabel data & charts kompleks
 - ✅ App Router = modern, performa optimal
 - ✅ Server components untuk dashboard data-heavy
-- ✅ TypeScript types bisa di-share antara mobile dan admin
+- ✅ Ekosistem chart (Recharts) lebih mature untuk admin dashboard
 
 ---
 
@@ -205,58 +208,61 @@ backend/
 
 ---
 
-### Mobile — React Native / Expo
+### Mobile — Flutter
 
 ```
 mobile/
-├── src/
-│   ├── screens/                         ← Satu folder per role
+├── lib/
+│   ├── main.dart                        ← Entry point app
+│   │
+│   ├── screens/                         ← Satu folder per fitur
 │   │   ├── auth/
-│   │   │   ├── LoginScreen.tsx
-│   │   │   └── RegisterScreen.tsx       ← Input invite code di sini
+│   │   │   ├── login_screen.dart
+│   │   │   └── register_screen.dart     ← Input invite code di sini
 │   │   └── student/
-│   │       ├── FeedScreen.tsx           ← TikTok-style video feed
-│   │       ├── ExploreScreen.tsx        ← Browse & filter roadmap
-│   │       ├── RoadmapDetailScreen.tsx  ← Detail + tombol enroll
-│   │       ├── VoiceNoteScreen.tsx      ← Record voice note
-│   │       ├── VoiceNoteResultScreen.tsx← Tampilkan skor + feedback
-│   │       └── ProgressScreen.tsx       ← XP, streak, analytics diri
+│   │       ├── feed_screen.dart         ← TikTok-style video feed (PageView vertikal)
+│   │       ├── explore_screen.dart      ← Browse & filter roadmap
+│   │       ├── roadmap_detail_screen.dart ← Detail + tombol enroll
+│   │       ├── voice_note_screen.dart   ← Record voice note + waveform
+│   │       ├── voice_note_result_screen.dart ← Skor + feedback LLM
+│   │       └── progress_screen.dart    ← XP, streak, analytics diri
 │   │
-│   ├── components/                      ← Komponen reusable
-│   │   ├── VideoPlayer.tsx              ← Wrapper expo-video
-│   │   ├── XPCounter.tsx               ← Tampilan XP + streak
-│   │   ├── VoiceWaveform.tsx           ← Animasi waveform saat rekam
-│   │   ├── RoadmapCard.tsx             ← Card di ExploreScreen
-│   │   ├── ChapterProgressBar.tsx      ← Progress bar chapter
-│   │   └── ScoreBadge.tsx              ← Badge skor voice note
+│   ├── widgets/                         ← Widget reusable
+│   │   ├── video_player_widget.dart     ← Wrapper video_player + chewie
+│   │   ├── xp_counter_widget.dart      ← Tampilan XP + animasi Lottie
+│   │   ├── voice_waveform_widget.dart  ← Animasi waveform custom painter
+│   │   ├── roadmap_card.dart           ← Card di explore screen
+│   │   ├── chapter_progress_bar.dart   ← Progress bar chapter
+│   │   └── score_badge.dart            ← Badge skor voice note
 │   │
-│   ├── services/                        ← Semua pemanggilan API
-│   │   ├── api.ts                       ← Axios instance + interceptor
-│   │   ├── authService.ts
-│   │   ├── roadmapService.ts
-│   │   ├── feedService.ts
-│   │   └── voiceNoteService.ts
+│   ├── services/                        ← Semua pemanggilan API (Dio)
+│   │   ├── api_service.dart            ← Dio instance + interceptor auth
+│   │   ├── auth_service.dart
+│   │   ├── roadmap_service.dart
+│   │   ├── feed_service.dart
+│   │   └── voice_note_service.dart
 │   │
-│   ├── context/
-│   │   └── AuthContext.tsx             ← Global auth state
+│   ├── providers/                       ← State management (Riverpod)
+│   │   ├── auth_provider.dart          ← State login/logout
+│   │   ├── feed_provider.dart          ← State feed chapter
+│   │   ├── voice_note_provider.dart    ← State rekam & polling
+│   │   └── enrollment_provider.dart   ← State roadmap yang diikuti
 │   │
-│   ├── hooks/                           ← Custom hooks
-│   │   ├── useVoiceRecorder.ts         ← Logic rekam audio
-│   │   ├── usePollingStatus.ts         ← Polling voice note status
-│   │   └── useXPAnimation.ts           ← Animasi XP naik
-│   │
-│   ├── types/                           ← TypeScript interfaces
-│   │   ├── User.ts
-│   │   ├── Roadmap.ts
-│   │   ├── VoiceNote.ts
-│   │   └── Content.ts
+│   ├── models/                          ← Data models (dari JSON API)
+│   │   ├── user.dart
+│   │   ├── roadmap.dart
+│   │   ├── chapter.dart
+│   │   ├── content.dart
+│   │   └── voice_note.dart
 │   │
 │   └── config/
-│       ├── api.ts                       ← BASE_URL config
-│       └── constants.ts                ← Warna, ukuran, dll
+│       ├── api_config.dart             ← BASE_URL
+│       ├── theme.dart                  ← Warna, typography app
+│       └── router.dart                 ← go_router navigation
 │
-├── app.json
-└── tsconfig.json
+├── pubspec.yaml                         ← Dependencies Flutter
+├── android/                             ← Android native config
+└── ios/                                 ← iOS native config
 ```
 
 ---
@@ -351,7 +357,8 @@ Mobile                  Backend               Queue Worker
 | Alasan | Detail |
 |---|---|
 | **Laravel = AI favorite** | Model AI punya training data Laravel terbanyak → kode generated lebih akurat |
-| **TypeScript di frontend** | Type-safe → AI generate komponen dengan props yang benar |
-| **Expo = zero native config** | Tidak perlu sentuh Xcode/Android Studio untuk beta |
+| **Flutter = UI premium** | Animasi smooth 60fps, TikTok-style feed paling mulus dibanding framework lain |
+| **Dart = AI-friendly** | Syntax Dart bersih & terstruktur → AI generate kode lebih akurat |
+| **Riverpod** | State management modern, mudah di-prompt ke AI per provider |
 | **Struktur modular** | Tiap fitur terpisah → AI bisa fokus per file tanpa context yang besar |
 | **Services pattern** | Logic bisnis di Service = lebih mudah di-prompt ke AI secara spesifik |
