@@ -13,7 +13,11 @@
 ### Web Admin — Developer & Creator Dashboard
 ![Dashboard Screens](wireframes/dashboard_screens.png)
 
+### Mobile — Dual Navigation (Roadmap vs Discover)
+![Dual Navigation Wireframe](wireframes/dual_navigation.png)
+
 ---
+
 
 ## 📱 Mobile App — Student Screens
 
