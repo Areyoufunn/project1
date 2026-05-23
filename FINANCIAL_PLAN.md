@@ -35,23 +35,33 @@ HPP (*Cost of Goods Sold*) adalah biaya variabel langsung yang timbul saat siswa
 
 ---
 
-### 2. Rincian HPP Variabel per Jalur Pengguna (Per Siswa / Bulan)
+### 2. Rincian HPP Variabel & Skema Monetisasi Kreator ala TikTok
+
+EduBend mengadopsi model monetisasi kreator modern berbasis **TikTok Creator Style** yang terbagi menjadi 3 Pilar:
+1. **EduBend Creator Fund (RPM Model):** Kreator dibayar flat **Rp 4.000 per 1.000 tayangan qualified** (ditonton >15 detik) dari *Royalty Pool* platform.
+2. **Virtual Gifting ("Saweran Pintar"):** Siswa memberikan hadiah virtual (seperti Kopi Hangat = Rp 1.000, Buku = Rp 5.000) menggunakan *EduCoins* yang mereka dapatkan gratis dari rajin belajar dan menyelesaikan checkpoint AI. EduBend menanggung pencairan uang tunai untuk kreator dari subsidi pendapatan iklan.
+3. **EduBend Premium Series (Paywall):** Kreator dapat menjual seri modul/roadmap eksklusif seharga Rp 15.000 sekali beli. Bagi hasil: **70% Kreator, 30% Platform**.
+
+---
+
+### 3. Simulasi Keuangan per Jalur Pengguna (Per Siswa / Bulan)
 
 #### A. Jalur B2B Sekolah Negeri (Siswa Gratis Berkuota)
 Siswa dari sekolah mitra dibatasi kuota belajar **3 checkpoint lisan per hari** (20 hari sekolah aktif sebulan = 60 checkpoint).
 * **Self-Hosted Whisper (STT):** Rp 0
 * **OpenRouter Gemini 1.5 Flash:** 60 checkpoint x Rp 97 = **Rp 5.820 / siswa / bulan**
 * **Cloudflare Stream Video:** 100 menit video (dengan sistem *local caching* di HP) = **Rp 1.600 / siswa / bulan**
+* **Porsi Creator Fund (RPM):** Mengasumsikan siswa memutar 100 video pendek sebulan = 100 views x (Rp 4.000 / 1.000) = **Rp 400 / siswa / bulan**
 * **Penyimpanan Suara:** Rp 0 (Langsung dihapus)
-* **Bagi Hasil Kreator:** Rp 0 (Kreator dibayar dari dana hibah/kontrak platform)
-* **TOTAL HPP B2B:** **Rp 7.420 / siswa / bulan**
+* **TOTAL HPP B2B:** **Rp 7.820 / siswa / bulan**
 
 #### B. Jalur B2C Mandiri Gratis (Didukung Iklan / Ad-Supported)
-Siswa umum gratis yang belajar secara mandiri diselingi iklan video pendek (eCPM Indonesia rata-rata Rp 16 per tayangan iklan).
+Siswa umum gratis belajar mandiri diselingi iklan video pendek (eCPM Indonesia rata-rata Rp 16 per tayangan iklan).
 * **HPP Murni API & Video:** Rp 1.697 / siswa / bulan (Hanya memproses 15 checkpoint gratis sebulan + streaming video dengan cache).
+* **Porsi Creator Fund (RPM):** Mengasumsikan siswa memutar 50 video sebulan = 50 views x (Rp 4.000 / 1.000) = **Rp 200 / siswa / bulan**
 * **Pendapatan Iklan:** Jika siswa menonton 4 iklan video per hari (120 iklan sebulan), platform mendapatkan pendapatan:
   $$120 \text{ tayangan} \times \text{Rp } 16 = \text{Rp } 1.920 \text{ / siswa / bulan}$$
-* **Keuntungan Bersih:** Pendapatan Iklan (Rp 1.920) > HPP API & Video (Rp 1.697). Siswa gratisan **menghasilkan profit bersih Rp 223 / bulan** bagi platform!
+* **Keuntungan Bersih Platform:** Pendapatan Iklan (Rp 1.920) - (HPP API Rp 1.697 + Porsi Creator Rp 200) = **Rp 23 / bulan** per siswa gratisan. (Siswa gratisan tetap menyumbang surplus kecil bagi platform!).
 
 #### C. Jalur B2C Mandiri Premium (Langganan Tanpa Iklan)
 Siswa umum berlangganan pribadi senilai **Rp 19.000 / bulan** untuk mematikan iklan dan mendapat akses penuh.
@@ -61,7 +71,7 @@ Siswa umum berlangganan pribadi senilai **Rp 19.000 / bulan** untuk mematikan ik
 
 ## 💰 BAB II: RAB (Rencana Anggaran Biaya) Modal Awal (CapEx)
 
-Modal awal dirancang sangat hemat karena pengerjaan dipercepat menggunakan asisten AI (*Vibe Coding*) untuk 2 developer selama 5 minggu (sesuai kontrak [SPRINT.md](file:///c:/laragon\www\project1\SPRINT.md)).
+Modal awal dirancang sangat hemat karena pengerjaan dipercepat menggunakan asisten AI (*Vibe Coding*) untuk 2 developer selama 5 minggu (sesuai kontrak [SPRINT.md](file:///c:/laragon\www\project1\SPRINT.md)). **Kami menyisihkan dana insentif awal untuk memecahkan Cold Start Problem bagi kreator perintis.**
 
 | No | Kebutuhan Pengembangan | Deskripsi | Anggaran (IDR) |
 |---|---|---|---|
@@ -71,9 +81,11 @@ Modal awal dirancang sangat hemat karena pengerjaan dipercepat menggunakan asist
 | 3 | UI/UX & Asset Designer | Pembuatan design UI premium, Lottie animations, & logo | Rp 4.000.000 |
 | **B** | **Peralatan & SaaS Development** | | |
 | 4 | AI Tools & OpenRouter Credit | Langganan Cursor Pro, GitHub Copilot, & saldo awal OpenRouter API | Rp 1.500.000 |
-| **C** | **Legalitas & Administrasi** | | |
-| 5 | Pendirian PT Perorangan & HAKI | Pengurusan legalitas resmi startup untuk perizinan sekolah negeri | Rp 3.000.000 |
-| **TOTAL** | **RAB MODAL AWAL (CapEx)** | **Modal Peluncuran EduBend Beta** | **Rp 32.500.000** |
+| **C** | **Insentif & Legalitas** | | |
+| 5 | Dana Insentif Awal Kreator | Pembayaran flat-fee di depan per video pembelajaran lolos kurasi | Rp 3.000.000 |
+| 6 | Pendirian PT Perorangan & HAKI | Pengurusan legalitas resmi startup untuk perizinan sekolah negeri | Rp 3.000.000 |
+| **TOTAL** | **RAB MODAL AWAL (CapEx)** | **Modal Peluncuran EduBend Beta & Insentif** | **Rp 35.500.000** |
+
 
 ---
 
@@ -163,13 +175,13 @@ Berikut adalah proyeksi pertumbuhan bisnis EduBend tahun pertama dengan implemen
 
 ### 2. Perhitungan ROI (Return on Investment) Tahun Pertama
 
-* **Total Modal Awal (CapEx):** Rp 32.500.000
+* **Total Modal Awal (CapEx):** Rp 35.500.000
 * **Total Laba Bersih Tahun Ke-1:** Rp 149.305.000
 * **Rumus ROI CapEx:**
   $$\text{ROI} = \frac{\text{Total Laba Bersih Tahun Ke-1}}{\text{Modal Awal (CapEx)}} \times 100\%$$
-  $$\text{ROI} = \frac{\text{Rp } 149.305.000}{\text{Rp } 32.500.000} \times 100\% \approx \mathbf{459,40\%}$$
+  $$\text{ROI} = \frac{\text{Rp } 149.305.000}{\text{Rp } 35.500.000} \times 100\% \approx \mathbf{420,58\%}$$
 
-*Catatan:* Jika kita memasukkan total investasi tahun pertama (CapEx + 12 bulan OpEx = Rp 32.500.000 + Rp 84.550.000 = Rp 117.050.000) sebagai basis pembagi investasi total:
-$$\text{ROI (Investasi Total)} = \frac{\text{Rp } 149.305.000}{\text{Rp } 117.050.000} \times 100\% \approx \mathbf{127,56\%}$$
+*Catatan:* Jika kita memasukkan total investasi tahun pertama (CapEx + 12 bulan OpEx = Rp 35.500.000 + Rp 84.550.000 = Rp 120.050.000) sebagai basis pembagi investasi total:
+$$\text{ROI (Investasi Total)} = \frac{\text{Rp } 149.305.000}{\text{Rp } 120.050.000} \times 100\% \approx \mathbf{124,37\%}$$
 
-Dengan membagi server ke beberapa tahap, kita berhasil menurunkan risiko pengeluaran awal secara dramatis, mencapai titik impas operasional (BEP) lebih cepat di Bulan ke-5, dan mendongkrak ROI investasi total tahun pertama dari **74.65% menjadi 127.56%**! Ini adalah model bisnis yang sangat sehat dan siap dipresentasikan di hadapan investor maupun juri kompetisi startup.
+Dengan membagi server ke beberapa tahap, kita berhasil menurunkan risiko pengeluaran awal secara dramatis, mencapai titik impas operasional (BEP) lebih cepat di Bulan ke-5, dan mendongkrak ROI investasi total tahun pertama dari **74.65% menjadi 124.37%**! Ini adalah model bisnis yang sangat sehat dan siap dipresentasikan di hadapan investor maupun juri kompetisi startup.
