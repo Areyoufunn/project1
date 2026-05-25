@@ -12,30 +12,30 @@ block-beta
     columns 5
 
     block:KP:1
-        A["🤝 KEY PARTNERS"]
+        A["🤝 KEY PARTNERS<br/>• Dinas Pendidikan Daerah<br/>• Sekolah Negeri (Kepsek)<br/>• Content Creator Edukasi<br/>• Google (Gemini via OpenRouter)<br/>• Meta/OpenAI (Whisper OS)<br/>• Cloudflare Stream"]
     end
     block:KAKR:1
-        B["⚙️ KEY ACTIVITIES"]
+        B["⚙️ KEY ACTIVITIES<br/>• Platform Dev (Laravel, Flutter)<br/>• Operasi Async AI Pipeline<br/>• Sosialisasi & Kemitraan Sekolah<br/>• Kurasi & Insentif Kreator"]
         space
-        C["🏗️ KEY RESOURCES"]
+        C["🏗️ KEY RESOURCES<br/>• Algoritma Content Selection<br/>• Pipeline AI Feynman (Whisper/Gemini)<br/>• Tech Stack (Flutter, Laravel)<br/>• 2 Devs (AI Vibe Coding)<br/>• CapEx Awal & Staged OpEx"]
     end
     block:VP:1
-        D["💎 VALUE PROPOSITIONS"]
+        D["💎 VALUE PROPOSITIONS<br/>• Gamified Doom Scrolling Video<br/>• Checkpoint Voice Note (Feynman AI)<br/>• Dual Nav (Roadmap vs Discover)<br/>• Flat-Rate Dana BOS Rp 400rb/bln<br/>• B2B Dashboard Analitik Guru<br/>• Creator Fund & Gift RPM"]
     end
     block:CRCH:1
-        E["❤️ CUSTOMER RELATIONSHIPS"]
+        E["❤️ CUSTOMER RELATIONSHIPS<br/>• Siswa: Automated & Gamified (Streak/XP)<br/>• Sekolah: Dedicated CS & Training<br/>• Creator: Community Support Dashboard"]
         space
-        F["📢 CHANNELS"]
+        F["📢 CHANNELS<br/>• Flutter Mobile App (iOS/Android)<br/>• Next.js Web Admin Dashboard<br/>• Invite Code System (B2B)<br/>• Direct B2B Sales (Dinas/Kepsek)"]
     end
     block:CS:1
-        G["👥 CUSTOMER SEGMENTS"]
+        G["👥 CUSTOMER SEGMENTS<br/>• Siswa Gen Z & Alpha (12-18 thn)<br/>• Sekolah Negeri (Dana BOS)<br/>• Creator Edukasi (Guru & Tutor)"]
     end
 
     block:COST:3
-        H["💸 COST STRUCTURE"]
+        H["💸 COST STRUCTURE<br/>• CapEx Rp 35.5jt (2 Devs, UI/UX, Legal, Cold Start)<br/>• COGS/Siswa/Bulan: B2B Rp 7.820, B2C Gratis Rp 1.897<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt"]
     end
     block:REV:2
-        I["💰 REVENUE STREAMS"]
+        I["💰 REVENUE STREAMS<br/>• B2B SaaS Flat Rate: Rp 400rb/sekolah/bulan (Dana BOS)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan<br/>• B2C Premium: Rp 19.000/siswa/bulan (Unlimited AI)<br/>• Creator Revenue Share (30% Platform / 70% Creator)"]
     end
 ```
 
