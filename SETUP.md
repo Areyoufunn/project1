@@ -56,15 +56,15 @@ Buat akun di layanan berikut sebelum mulai:
 
 ```bash
 # 1. Buat folder project
-mkdir eduflow
-cd eduflow
+mkdir EduFlow
+cd EduFlow
 
 # 2. Init git
 git init
 git branch -M main
 
 # 3. Buat repo di GitHub, lalu hubungkan
-git remote add origin https://github.com/username/eduflow.git
+git remote add origin https://github.com/username/EduFlow.git
 
 # 4. Buat branch develop
 git checkout -b develop
@@ -78,7 +78,7 @@ git push -u origin develop
 ### Langkah 1: Buat Project Laravel
 
 ```bash
-# Di dalam folder eduflow/
+# Di dalam folder EduFlow/
 composer create-project laravel/laravel backend
 cd backend
 ```
@@ -117,7 +117,7 @@ APP_URL=http://localhost:8000
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=eduflow
+DB_DATABASE=EduFlow
 DB_USERNAME=root
 DB_PASSWORD=
 
@@ -137,7 +137,7 @@ OPENAI_ORGANIZATION=  # opsional
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_DEFAULT_REGION=ap-southeast-1
-AWS_BUCKET=eduflow-audio
+AWS_BUCKET=EduFlow-audio
 
 # Cloudflare Stream (untuk video)
 CLOUDFLARE_ACCOUNT_ID=
@@ -155,7 +155,7 @@ FILESYSTEM_DISK=s3
 php artisan key:generate
 
 # Buat database di MySQL
-# (buka Laragon → klik MySQL → buat database "eduflow")
+# (buka Laragon → klik MySQL → buat database "EduFlow")
 
 # Jalankan migration
 php artisan migrate
@@ -200,7 +200,7 @@ flutter doctor
 ### Langkah 2: Buat Project Flutter
 
 ```bash
-# Di dalam folder eduflow/
+# Di dalam folder EduFlow/
 flutter create mobile
 cd mobile
 ```
@@ -287,7 +287,7 @@ flutter run -d emulator-5554
 ### Langkah 1: Buat Project Next.js
 
 ```bash
-# Di dalam folder eduflow/
+# Di dalam folder EduFlow/
 npx create-next-app admin --typescript --tailwind --app
 cd admin
 ```
@@ -334,8 +334,8 @@ Jika Dev 2 mau setup project yang sudah ada:
 
 ```bash
 # Clone repo
-git clone https://github.com/username/eduflow.git
-cd eduflow
+git clone https://github.com/username/EduFlow.git
+cd EduFlow
 
 # Checkout branch develop
 git checkout develop
@@ -364,7 +364,7 @@ cp .env.local.example .env.local
 ## 📁 6. Struktur Folder Project
 
 ```
-eduflow/
+EduFlow/
 ├── backend/          ← Laravel API (Dev 1)
 │   ├── app/
 │   │   ├── Http/
@@ -432,7 +432,7 @@ eduflow/
 
 | Masalah | Solusi |
 |---|---|
-| `php artisan migrate` error | Pastikan database `eduflow` sudah dibuat di MySQL |
+| `php artisan migrate` error | Pastikan database `EduFlow` sudah dibuat di MySQL |
 | Mobile tidak bisa connect ke backend | Pastikan pakai IP lokal, bukan `localhost` |
 | Redis connection refused | Jalankan Redis server: `redis-server` |
 | OpenAI error 401 | API key salah atau quota habis |

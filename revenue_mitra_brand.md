@@ -1,17 +1,17 @@
 # 📊 ANALISIS STRATEGIS & PROYEKSI REVENUE: DIRECT BRAND SPONSORSHIP
 
-Dokumen ini menyajikan analisis keuangan dan proyeksi *upside revenue* skala besar untuk platform **EduBend** apabila berhasil menjaring kemitraan langsung (*Direct Brand Sponsorship / Native EdTech Advertising*) dengan korporasi FMCG raksasa yang menyasar demografi pelajar (seperti **Milo, Kraft (Oreo/Keju Kraft), Dancow, Indomilk, atau Sustagen**).
+Dokumen ini menyajikan analisis keuangan dan proyeksi *upside revenue* skala besar untuk platform **EduFlow** apabila berhasil menjaring kemitraan langsung (*Direct Brand Sponsorship / Native EdTech Advertising*) dengan korporasi FMCG raksasa yang menyasar demografi pelajar (seperti **Milo, Kraft (Oreo/Keju Kraft), Dancow, Indomilk, atau Sustagen**).
 
 ---
 
-## 📌 1. Mengapa Brand FMCG Raksasa Tertarik pada EduBend?
+## 📌 1. Mengapa Brand FMCG Raksasa Tertarik pada EduFlow?
 
-Di media sosial umum (seperti TikTok, YouTube, atau Instagram), iklan brand tercampur dengan konten hiburan acak (*doomscrolling*) yang tidak fokus dan rentan dilewati (*skipped*). EduBend menawarkan proposisi nilai unik bagi pengiklan korporasi:
+Di media sosial umum (seperti TikTok, YouTube, atau Instagram), iklan brand tercampur dengan konten hiburan acak (*doomscrolling*) yang tidak fokus dan rentan dilewati (*skipped*). EduFlow menawarkan proposisi nilai unik bagi pengiklan korporasi:
 
 * **Target Demografis 100% Akurat & Bersih:** Pengguna platform terverifikasi sebagai pelajar aktif usia 12-18 tahun melalui sistem *Invite Code* sekolah berbasis Dapodik. Tidak ada pemborosan anggaran iklan (*ad waste*) pada audiens yang tidak relevan.
 * **Perhatian Penuh & Kognisi Aktif (High Engagement):** Siswa menggunakan aplikasi secara fokus untuk menyimak video ajar dan menyelesaikan tantangan verbal *Feynman AI Voice Note*. Iklan native ditempatkan secara halus di antara bab belajar.
 * **Afiliasi Merek Positif (Brand Association):** Brand diasosiasikan langsung dengan aktivitas "kecerdasan", "rajin belajar", dan "prestasi". Hal ini membangun reputasi merek yang sangat kuat dan disukai oleh orang tua siswa selaku pemegang keputusan finansial keluarga.
-* **Konversi Dunia Nyata (O2O - Online to Offline):** Sistem gamifikasi EduBend memungkinkan pembagian kupon hadiah produk digital dari sponsor yang dapat ditukarkan siswa langsung di minimarket (seperti Alfamart atau Indomaret).
+* **Konversi Dunia Nyata (O2O - Online to Offline):** Sistem gamifikasi EduFlow memungkinkan pembagian kupon hadiah produk digital dari sponsor yang dapat ditukarkan siswa langsung di minimarket (seperti Alfamart atau Indomaret).
 
 ---
 
@@ -79,9 +79,9 @@ Apabila kita menggabungkan pendapatan dasar dari **B2B SaaS Flat Rate Sekolah** 
 Saat melakukan presentasi di hadapan juri kompetisi startup atau pemodal ventura (*Venture Capital*), tim founder dapat menyajikan narasi pertahanan dan ekspansi bisnis yang sangat meyakinkan:
 
 1. **"SaaS Flat Rate Sekolah (Dana BOS) adalah Parit Pertahanan Kami (Defensive Moat):"**
-   - *Narasi:* Pendapatan B2B dari dana BOS menjamin bahwa EduBend dapat menutup seluruh biaya server tetap (*fixed cost* / OpEx) sejak bulan ke-5 dengan risiko kehabisan uang nol (*zero risk of dying*). Aplikasi akan tetap hidup dan beroperasi selamanya karena biaya server sudah tertutup.
+   - *Narasi:* Pendapatan B2B dari dana BOS menjamin bahwa EduFlow dapat menutup seluruh biaya server tetap (*fixed cost* / OpEx) sejak bulan ke-5 dengan risiko kehabisan uang nol (*zero risk of dying*). Aplikasi akan tetap hidup dan beroperasi selamanya karena biaya server sudah tertutup.
 2. **"Kemitraan Brand FMCG Raksasa adalah Mesin Pengganda Keuntungan Kami (Profit Multiplier):"**
-   - *Narasi:* Begitu EduBend menjaring puluhan ribu siswa aktif harian dari sekolah mitra, kami membuka inventori iklan bernilai sangat tinggi bagi brand besar seperti Milo dan Kraft. Ini melipatgandakan keuntungan bersih platform hingga **7,5× Lipat** tanpa membebani biaya tambahan bagi sekolah maupun siswa.
+   - *Narasi:* Begitu EduFlow menjaring puluhan ribu siswa aktif harian dari sekolah mitra, kami membuka inventori iklan bernilai sangat tinggi bagi brand besar seperti Milo dan Kraft. Ini melipatgandakan keuntungan bersih platform hingga **7,5× Lipat** tanpa membebani biaya tambahan bagi sekolah maupun siswa.
 3. **"Kami Menghubungkan Dunia Digital dan Fisik Pelajar (Online-to-Offline Gamification):"**
    - *Narasi:* Kami tidak menampilkan banner iklan pasif yang mengganggu belajar. Kami mengubah iklan menjadi *Challenge* tergamifikasi yang mendorong siswa belajar lebih rajin untuk mendapatkan *reward* fisik nyata dari sponsor. Ini adalah model periklanan masa depan yang didukung oleh AI kognitif.
 

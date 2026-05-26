@@ -1,6 +1,6 @@
-# 📊 RENCANA KEUANGAN (FINANCIAL PLAN) — EduBend Hybrid Model
+# 📊 RENCANA KEUANGAN (FINANCIAL PLAN) — EduFlow Hybrid Model
 
-Dokumen ini menyajikan analisis keuangan lengkap untuk pengembangan dan operasional platform **EduBend** menggunakan **Model Bisnis Hibrida (B2B Sekolah Mitra + B2C Ad-Supported + B2C Premium)**. Skema ini dirancang khusus untuk menyiasati keterbatasan anggaran dana BOS sekolah negeri di Indonesia serta menekan biaya API AI hingga ke titik paling efisien.
+Dokumen ini menyajikan analisis keuangan lengkap untuk pengembangan dan operasional platform **EduFlow** menggunakan **Model Bisnis Hibrida (B2B Sekolah Mitra + B2C Ad-Supported + B2C Premium)**. Skema ini dirancang khusus untuk menyiasati keterbatasan anggaran dana BOS sekolah negeri di Indonesia serta menekan biaya API AI hingga ke titik paling efisien.
 
 ---
 
@@ -24,9 +24,9 @@ Dokumen ini menyajikan analisis keuangan lengkap untuk pengembangan dan operasio
 
 HPP (*Cost of Goods Sold*) adalah biaya variabel langsung yang timbul saat siswa menggunakan platform. Berkat optimasi teknologi, kita berhasil memangkas HPP hingga ke titik paling dasar.
 
-### 1. Perbandingan Arsitektur AI: Konvensional vs EduBend Teroptimasi
+### 1. Perbandingan Arsitektur AI: Konvensional vs EduFlow Teroptimasi
 
-| Komponen Biaya | Arsitektur Konvensional (OpenAI API) | Arsitektur EduBend Teroptimasi (Self-Hosted + OpenRouter) | Status Efisiensi |
+| Komponen Biaya | Arsitektur Konvensional (OpenAI API) | Arsitektur EduFlow Teroptimasi (Self-Hosted + OpenRouter) | Status Efisiensi |
 |---|---|---|---|
 | **Speech-to-Text (STT)** | Paid Whisper API: `$0.006` / menit (~Rp 96) | **Self-Hosted Whisper (Model `base` / `tiny`)** | **GRATIS (Rp 0)** |
 | **Evaluasi Semantik (LLM)** | OpenAI GPT-4o standar (~Rp 195 / hit) | **Gemini 1.5 Flash via OpenRouter** | **Hemat 95% (Rp 97 / hit)** |
@@ -37,10 +37,10 @@ HPP (*Cost of Goods Sold*) adalah biaya variabel langsung yang timbul saat siswa
 
 ### 2. Rincian HPP Variabel & Skema Monetisasi Kreator ala TikTok
 
-EduBend mengadopsi model monetisasi kreator modern berbasis **TikTok Creator Style** yang terbagi menjadi 3 Pilar:
-1. **EduBend Creator Fund (RPM Model):** Kreator dibayar flat **Rp 4.000 per 1.000 tayangan qualified** (ditonton >15 detik) dari *Royalty Pool* platform.
-2. **Virtual Gifting ("Saweran Pintar"):** Siswa memberikan hadiah virtual (seperti Kopi Hangat = Rp 1.000, Buku = Rp 5.000) menggunakan *EduCoins* yang mereka dapatkan gratis dari rajin belajar dan menyelesaikan checkpoint AI. EduBend menanggung pencairan uang tunai untuk kreator dari subsidi pendapatan iklan.
-3. **EduBend Premium Series (Paywall):** Kreator dapat menjual seri modul/roadmap eksklusif seharga Rp 15.000 sekali beli. Bagi hasil: **70% Kreator, 30% Platform**.
+EduFlow mengadopsi model monetisasi kreator modern berbasis **TikTok Creator Style** yang terbagi menjadi 3 Pilar:
+1. **EduFlow Creator Fund (RPM Model):** Kreator dibayar flat **Rp 4.000 per 1.000 tayangan qualified** (ditonton >15 detik) dari *Royalty Pool* platform.
+2. **Virtual Gifting ("Saweran Pintar"):** Siswa memberikan hadiah virtual (seperti Kopi Hangat = Rp 1.000, Buku = Rp 5.000) menggunakan *EduCoins* yang mereka dapatkan gratis dari rajin belajar dan menyelesaikan checkpoint AI. EduFlow menanggung pencairan uang tunai untuk kreator dari subsidi pendapatan iklan.
+3. **EduFlow Premium Series (Paywall):** Kreator dapat menjual seri modul/roadmap eksklusif seharga Rp 15.000 sekali beli. Bagi hasil: **70% Kreator, 30% Platform**.
 
 ---
 
@@ -165,17 +165,17 @@ OpEx adalah pengeluaran tetap bulanan (*fixed costs*) untuk menjaga server tetap
 
 ## 🎯 BAB IV: Analisis Kebijakan, Kelayakan, & BEP Sekolah Mitra (B2B Dana BOS)
 
-Menyasar pasar **Sekolah Mitra (B2B)** memerlukan landasan hukum dan kalkulasi finansial yang konkret. Di bawah ini disajikan pembuktian matematis serta regulasi nyata yang mendasari kelayakan alokasi dana BOS untuk berlangganan EduBend tanpa membebani keuangan sekolah.
+Menyasar pasar **Sekolah Mitra (B2B)** memerlukan landasan hukum dan kalkulasi finansial yang konkret. Di bawah ini disajikan pembuktian matematis serta regulasi nyata yang mendasari kelayakan alokasi dana BOS untuk berlangganan EduFlow tanpa membebani keuangan sekolah.
 
 ### 1. Landasan Hukum & Regulasi Dana BOS (BOSP) Nasional
-Penggunaan dana Bantuan Operasional Satuan Pendidikan (BOSP/BOS) Reguler untuk berlangganan platform EduBend dijamin **legal, sah, dan aman dari temuan audit (BPK/Inspektorat)** berdasarkan aturan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek):
+Penggunaan dana Bantuan Operasional Satuan Pendidikan (BOSP/BOS) Reguler untuk berlangganan platform EduFlow dijamin **legal, sah, dan aman dari temuan audit (BPK/Inspektorat)** berdasarkan aturan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek):
 * **Permendikbudristek No. 63 Tahun 2022 tentang Petunjuk Teknis Pengelolaan Dana BOSP:**
   - **Pasal terkait Penggunaan Dana:** Secara eksplisit memperbolehkan alokasi dana untuk *"Penyediaan aplikasi atau perangkat lunak (software) yang mendukung kegiatan pembelajaran"* serta *"Pembiayaan langganan layanan pendidikan daring"*.
-  - **Kepatuhan Kategori:** EduBend adalah *Learning Management & AI Cognitive Analytics Platform* yang berfungsi langsung mendukung proses evaluasi, remedial, dan pelaporan capaian kognitif siswa oleh guru. Ini **tidak melanggar pantangan** (seperti membeli software pelaporan keuangan/administrasi BOS internal yang dilarang).
+  - **Kepatuhan Kategori:** EduFlow adalah *Learning Management & AI Cognitive Analytics Platform* yang berfungsi langsung mendukung proses evaluasi, remedial, dan pelaporan capaian kognitif siswa oleh guru. Ini **tidak melanggar pantangan** (seperti membeli software pelaporan keuangan/administrasi BOS internal yang dilarang).
   - **Rujukan Resmi:** Dokumen resmi dapat diunduh langsung di Portal JDIH Kemendikbud: [Permendikbudristek No. 63 Tahun 2022 - JDIH Kemendikbud](https://jdih.kemdikbud.go.id/detail_peraturan?main=3238).
 * **Mekanisme Pengadaan Wajib (SIPLah):**
   - Berdasarkan **Permendikbudristek No. 18 Tahun 2022** tentang Pedoman PBJ Sekolah (dapat diakses di [Portal JDIH Kemendikbud](https://jdih.kemdikbud.go.id/)), seluruh transaksi wajib disalurkan melalui platform **SIPLah** (*Sistem Informasi Pengadaan Sekolah*): [siplah.kemdikbud.go.id](https://siplah.kemdikbud.go.id/).
-  - **Implementasi EduBend:** Tim EduBend akan mendaftarkan badan hukum (PT Perorangan dari CapEx) sebagai mitra *merchant* di salah satu marketplace mitra SIPLah resmi (seperti TokoLadang, Eureka, Blibli SIPLah, dll.). Sekolah membeli lisensi EduBend melalui sistem ini untuk menjamin akuntabilitas 100%.
+  - **Implementasi EduFlow:** Tim EduFlow akan mendaftarkan badan hukum (PT Perorangan dari CapEx) sebagai mitra *merchant* di salah satu marketplace mitra SIPLah resmi (seperti TokoLadang, Eureka, Blibli SIPLah, dll.). Sekolah membeli lisensi EduFlow melalui sistem ini untuk menjamin akuntabilitas 100%.
 
 ### 2. Analisis Keterjangkauan & Beban Anggaran Sekolah (Kalkulasi Riil)
 Mari kita buktikan secara matematis bahwa harga berlangganan flat **Rp 400.000 / bulan** tidak membebani anggaran dana BOS sekolah.
@@ -186,7 +186,7 @@ Mari kita buktikan secara matematis bahwa harga berlangganan flat **Rp 400.000 /
 * **Total Dana BOS yang Diterima Sekolah per Tahun:**
   $$300 \text{ siswa} \times \text{Rp } 1.100.000 = \mathbf{\text{Rp } 330.000.000 \text{ / tahun}}$$
 
-**B. Biaya Berlangganan EduBend:**
+**B. Biaya Berlangganan EduFlow:**
 * Biaya Bulanan: Rp 400.000 / bulan
 * Biaya Tahunan: Rp 400.000 × 12 bulan = **Rp 4.800.000 / tahun**
 
@@ -194,23 +194,23 @@ Mari kita buktikan secara matematis bahwa harga berlangganan flat **Rp 400.000 /
 $$\text{Persentase Beban BOS} = \frac{\text{Rp } 4.800.000}{\text{Rp } 330.000.000} \times 100\% \approx \mathbf{1,45\%}$$
 
 > 💡 **Kesimpulan Kelayakan:**
-> Biaya langganan EduBend hanya memakan **1,45%** dari total alokasi dana BOS tahunan sekolah! Rata-rata sekolah memiliki alokasi longgar sekitar **5% s.d. 10%** untuk pos pengembangan perpustakaan/ICT. Dengan porsi yang sangat kecil ini, kepala sekolah dan komite sekolah dapat dengan mudah memberikan persetujuan tanpa mengorbankan kebutuhan operasional sekolah lainnya.
+> Biaya langganan EduFlow hanya memakan **1,45%** dari total alokasi dana BOS tahunan sekolah! Rata-rata sekolah memiliki alokasi longgar sekitar **5% s.d. 10%** untuk pos pengembangan perpustakaan/ICT. Dengan porsi yang sangat kecil ini, kepala sekolah dan komite sekolah dapat dengan mudah memberikan persetujuan tanpa mengorbankan kebutuhan operasional sekolah lainnya.
 
 ### 3. Alur Transaksi & Pencairan Dana BOS Sekolah (SIPLah & ARKAS)
-Agar kalkulasi ini tidak mengambang, berikut alur administrasi riil pengadaan EduBend oleh sekolah mitra:
+Agar kalkulasi ini tidak mengambang, berikut alur administrasi riil pengadaan EduFlow oleh sekolah mitra:
 ```mermaid
 graph TD
-    A[Tim EduBend] -->|Daftar Legalitas & Produk| B(Marketplace Partner SIPLah)
+    A[Tim EduFlow] -->|Daftar Legalitas & Produk| B(Marketplace Partner SIPLah)
     C[Kepala Sekolah & Bendahara] -->|Rencanakan Anggaran| D[ARKAS / RKAS Sekolah]
-    D -->|Persetujuan Anggaran| E[Beli Layanan EduBend di SIPLah]
+    D -->|Persetujuan Anggaran| E[Beli Layanan EduFlow di SIPLah]
     E -->|Terbitkan SPK & Pembayaran Virtual Account| B
-    B -->|Konfirmasi & Aktivasi Invite Code| F[Siswa & Guru EduBend]
+    B -->|Konfirmasi & Aktivasi Invite Code| F[Siswa & Guru EduFlow]
     B -->|Pencairan Uang Bersih| A
 ```
-1. **Perencanaan (ARKAS):** Sekolah memasukkan mata anggaran *"Langganan Platform Evaluasi Pembelajaran AI (EduBend)"* ke dalam **RKAS** menggunakan aplikasi resmi **ARKAS**: [arkas.kemdikbud.go.id](https://arkas.kemdikbud.go.id/).
-2. **Pengadaan (SIPLah):** Bendahara sekolah masuk ke portal resmi SIPLah ([siplah.kemdikbud.go.id](https://siplah.kemdikbud.go.id/)), mencari produk EduBend, dan menerbitkan Surat Perintah Kerja (SPK).
-3. **Aktivasi:** EduBend mendeteksi transaksi SIPLah, mengaktifkan akun dasbor guru, dan mengirimkan *Invite Code* sekolah agar seluruh siswa dapat mendaftar secara gratis.
-4. **Pembayaran:** Sekolah mentransfer pembayaran menggunakan Virtual Account bank daerah resmi langsung ke sistem kliring SIPLah, yang kemudian dicairkan ke rekening EduBend setelah dipotong biaya administrasi marketplace (~1.5%).
+1. **Perencanaan (ARKAS):** Sekolah memasukkan mata anggaran *"Langganan Platform Evaluasi Pembelajaran AI (EduFlow)"* ke dalam **RKAS** menggunakan aplikasi resmi **ARKAS**: [arkas.kemdikbud.go.id](https://arkas.kemdikbud.go.id/).
+2. **Pengadaan (SIPLah):** Bendahara sekolah masuk ke portal resmi SIPLah ([siplah.kemdikbud.go.id](https://siplah.kemdikbud.go.id/)), mencari produk EduFlow, dan menerbitkan Surat Perintah Kerja (SPK).
+3. **Aktivasi:** EduFlow mendeteksi transaksi SIPLah, mengaktifkan akun dasbor guru, dan mengirimkan *Invite Code* sekolah agar seluruh siswa dapat mendaftar secara gratis.
+4. **Pembayaran:** Sekolah mentransfer pembayaran menggunakan Virtual Account bank daerah resmi langsung ke sistem kliring SIPLah, yang kemudian dicairkan ke rekening EduFlow setelah dipotong biaya administrasi marketplace (~1.5%).
 
 ### 4. Simulasi Unit Ekonomi per 1 Sekolah Mitra (Flat Rp 400.000/bulan)
 Asumsi 1 sekolah memiliki rata-rata **25-30 siswa aktif harian** (*Daily Active Users*) yang menggunakan aplikasi secara konsisten di bawah kuota 3 checkpoint/hari (asumsi DAU moderat):
@@ -234,7 +234,7 @@ Asumsi 1 sekolah memiliki rata-rata **25-30 siswa aktif harian** (*Daily Active 
 
 ## 📊 BAB V: Proyeksi Return on Investment (ROI) - Tahun Pertama
 
-Berikut adalah proyeksi pertumbuhan bisnis EduBend tahun pertama dengan implementasi **Pentahapan Server (OpEx yang fleksibel)** dan fokus akuisisi sekolah mitra B2B.
+Berikut adalah proyeksi pertumbuhan bisnis EduFlow tahun pertama dengan implementasi **Pentahapan Server (OpEx yang fleksibel)** dan fokus akuisisi sekolah mitra B2B.
 
 ### 1. Tabel Arus Kas & Pertumbuhan Sekolah Mitra (Tahun 1)
 
@@ -352,10 +352,10 @@ Konversi IDR = $0,00056 × Rp 16.000 ≈ Rp 8,96 ← sangat murah!
 | Format Iklan | eCPM Indonesia (USD) | eCPM Indonesia (IDR ~Rp 16.000) | Catatan |
 |---|---|---|---|
 | **Banner** | $0,10 – $0,30 | Rp 1.600 – 4.800 | Format terendah, hindari |
-| **Interstitial Video** | $0,30 – $1,00 | Rp 4.800 – 16.000 | Digunakan EduBend |
+| **Interstitial Video** | $0,30 – $1,00 | Rp 4.800 – 16.000 | Digunakan EduFlow |
 | **Rewarded Video** | $0,50 – $2,00 | Rp 8.000 – 32.000 | Paling tinggi, opt-in |
 
-**Asumsi EduBend menggunakan eCPM Rp 16 / tayangan (bukan per 1.000):**
+**Asumsi EduFlow menggunakan eCPM Rp 16 / tayangan (bukan per 1.000):**
 ```
 eCPM Interstitial konservatif = $1,00 per 1.000 impressions
 Konversi per tayangan         = ($1,00 / 1.000) × Rp 16.000 = Rp 16 / tayangan ✓
@@ -373,9 +373,9 @@ Pendapatan = 120 tayangan × Rp 16/tayangan = Rp 1.920 / siswa / bulan ✓
 
 #### C. Jaringan Iklan (Ad Network) yang Tersedia di Indonesia
 
-EduBend dapat memonetisasi inventori iklannya melalui satu atau lebih jaringan berikut:
+EduFlow dapat memonetisasi inventori iklannya melalui satu atau lebih jaringan berikut:
 
-| Ad Network | Platform | Keunggulan | Cocok untuk EduBend |
+| Ad Network | Platform | Keunggulan | Cocok untuk EduFlow |
 |---|---|---|---|
 | **Google AdMob** | Android & iOS | Paling dominan di Indonesia (38%+ share), akses ke Google Ads | ✅ **Utama** |
 | **Unity Ads** | Android & iOS | Tinggi di rewarded video, familiar untuk app mobile | ✅ Sekunder |
@@ -438,7 +438,7 @@ TAHAP 3 (Bulan 6+) — Budget Rp 1.800.000/bulan:
 | **.id** | ~Rp 219.000 | ~Rp 219.000 | Rumahweb / Niagahoster | [niagahoster.co.id/domain](https://www.niagahoster.co.id/domain/) |
 | **.co.id** | ~Rp 219.000 | ~Rp 219.000 | Rumahweb | [rumahweb.com/domain](https://www.rumahweb.com/domain/) |
 
-**Rekomendasi EduBend:** Daftarkan `edubend.id` or `edubend.co.id` (~Rp 219.000/tahun = **Rp 18.250/bulan**) — domain `.id` lebih terpercaya untuk B2B sekolah negeri Indonesia.
+**Rekomendasi EduFlow:** Daftarkan `eduflow.id` or `eduflow.co.id` (~Rp 219.000/tahun = **Rp 18.250/bulan**) — domain `.id` lebih terpercaya untuk B2B sekolah negeri Indonesia.
 
 > 📌 Biaya domain ~Rp 18.000/bulan sudah termasuk dalam pos **"Layanan SaaS Pendukung"** (Rp 150.000/bulan Tahap 1) bersama DNS, email, dan monitoring tools.
 

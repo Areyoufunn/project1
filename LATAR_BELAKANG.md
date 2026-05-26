@@ -38,7 +38,7 @@ Krisis efektivitas di atas dipicu oleh tiga pilar masalah yang saling terikat se
 * **Validasi Riset & Data:**
   * **Kantor Berita Antara:** Memaparkan bahaya penyalahgunaan AI generatif di Indonesia yang justru melahirkan "ilusi pintar" dan mendegradasi kemampuan analisis mandiri siswa ([Link Berita](https://www.antaranews.com/berita/5265193/ai-dan-ilusi-kepintaran-dalam-pendidikan-indonesia)).
   * **Yayasan Kesejahteraan Anak Indonesia (YKP):** Menyebut fenomena *"sekolah tapi tidak belajar"* di mana kurikulum kehilangan esensi pendalaman materi konseptual ([Link Refleksi](https://ykpindonesia.org/id/refleksi-hari-pendidikan-nasional-2025-katanya-sekolah-tapi-kok-tidak-belajar/)).
-  * **Studi Kompasiana:** Menyoroti potret miris siswa tingkat SMA di Indonesia yang bahkan belum menguasai operasi numerasi perkalian dasar akibat evaluasi yang tidak memvalidasi kemampuan dasar secara nyata ([Link Artikel](https://www.kompasiana.com/anissatulhassanah/6867ea12ed641555a1752322/anak-sma-tidak-bisa-perkalian-kemampuan-dasar-yang-tersingkirkan-di-tengah-pendidikan)).
+  * **Studi Kompasiana & Survei PISA 2022:** Menyoroti fenomena kritis *learning gap*, yaitu ketidaksesuaian yang senjang antara jenjang pendidikan formal yang ditempuh siswa dengan kemampuan akademik nyata yang mereka miliki. Kegagalan sistemik ini dibuktikan secara makro oleh hasil **survei PISA 2022**, yang menunjukkan bahwa **82% anak berusia 15 tahun di Indonesia tidak dapat memahami matematika dengan baik** (bahkan pada level operasi matematika dasar). Secara mikro dan faktual di lapangan, *learning gap* ekstrem ini divalidasi oleh investigasi **Studi Kompasiana** yang menemukan potret miris di mana sejumlah siswa tingkat SMA di Indonesia bahkan belum menguasai operasi numerasi perkalian dasar akibat sistem evaluasi sekolah konvensional yang terus meloloskan kenaikan kelas siswa tanpa memvalidasi pemahaman konsep mendalam secara nyata ([Link Artikel](https://www.kompasiana.com/anissatulhassanah/6867ea12ed641555a1752322/anak-sma-tidak-bisa-perkalian-kemampuan-dasar-yang-tersingkirkan-di-tengah-pendidikan)).
   * **Jurnal JPTAM:** Meneliti tingginya persentase miskonsepsi (salah konsep) pada siswa yang melakukan pembelajaran mandiri tanpa adanya umpan balik interaktif ([Link Jurnal](https://jptam.org/index.php/jptam/article/view/4776/4048)).
 
 #### C. Pilar Ekonomi (*Economic Gap*) — Mahalnya Akses Bimbingan Interaktif
@@ -52,13 +52,13 @@ Krisis efektivitas di atas dipicu oleh tiga pilar masalah yang saling terikat se
 
 ---
 
-### 1.1.4 Celah Solusi (*The Gap Opportunity for EduBend*)
-EduBend hadir memotong mata rantai krisis di atas dengan menawarkan konsep **"Gamified Educational Doom Scrolling"** dan **"Demokratisasi Feynman AI"**. Kami membajak kebiasaan scrolling siswa, menghentikan ilusi kepintaran dengan *Checkpoint Voice Note*, dan menyediakan umpan balik verbal interaktif menggunakan AI secara gratis dan massal.
+### 1.1.4 Celah Solusi (*The Gap Opportunity for EduFlow*)
+EduFlow hadir memotong mata rantai krisis di atas dengan menawarkan konsep **"Gamified Educational Doom Scrolling"** dan **"Demokratisasi Feynman AI"**. Kami membajak kebiasaan scrolling siswa, menghentikan ilusi kepintaran dengan *Checkpoint Voice Note*, dan menyediakan umpan balik verbal interaktif menggunakan AI secara gratis dan massal.
 
 ---
 
 ## 1.2 Rumusan Masalah
-Berdasarkan latar belakang di atas, rumusan masalah dalam pengembangan bisnis EduBend adalah:
+Berdasarkan latar belakang di atas, rumusan masalah dalam pengembangan bisnis EduFlow adalah:
 1. **Bagaimana** membajak adiksi *doom scrolling* siswa menjadi aktivitas belajar *micro-learning* yang terstruktur sesuai kurikulum resmi?
 2. **Bagaimana** memutus mata rantai *illusion of competence* (ilusi pemahaman) siswa melalui metode asesmen lisan berbasis Teknik Feynman?
 3. **Bagaimana** merancang teknologi AI (Whisper Speech-to-Text & LLM Semantic Scoring) yang mampu mengevaluasi penjelasan lisan siswa secara akurat dengan biaya yang terjangkau secara inklusif?
@@ -66,7 +66,7 @@ Berdasarkan latar belakang di atas, rumusan masalah dalam pengembangan bisnis Ed
 ---
 
 ## 1.3 Tujuan Program dan Bisnis
-Tujuan yang ingin dicapai melalui pengembangan platform EduBend adalah:
+Tujuan yang ingin dicapai melalui pengembangan platform EduFlow adalah:
 1. **Mengubah Perilaku Belajar:** Mengalihkan perilaku *doom scrolling* non-produktif menjadi aktivitas pembelajaran mandiri digital yang adiktif namun produktif.
 2. **Meningkatkan Retensi Kognitif:** Menerapkan evaluasi berbasis verbal (*active recall*) guna memastikan pemahaman konseptual mendalam siswa, bukan sekadar ingatan jangka pendek.
 3. **Pemerataan Akses Bimbingan Berkualitas:** Menyediakan simulasi tutor pribadi interaktif yang cerdas secara massal dan gratis/terjangkau bagi seluruh pelajar Indonesia tanpa terkecuali.

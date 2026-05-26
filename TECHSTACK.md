@@ -1,7 +1,7 @@
-# 🛠️ TECH STACK — EduBend
+# 🛠️ TECH STACK — EduFlow
 
 > Dokumen ini menjelaskan bahasa pemrograman, framework, tools,
-> dan struktur file lengkap untuk project EduBend.
+> dan struktur file lengkap untuk project EduFlow.
 
 ---
 
@@ -262,7 +262,7 @@ mobile/
 │   │
 │   └── config/
 │       ├── api_config.dart             ← BASE_URL
-│       ├── theme.dart                  ← Warna EduBend: BG #0A1931 | Button #1A3D63 | Accent #4A7FA7 | Logo #B3CFE5 | Surface #F6FAFD
+│       ├── theme.dart                  ← Warna EduFlow: BG #0A1931 | Button #1A3D63 | Accent #4A7FA7 | Logo #B3CFE5 | Surface #F6FAFD
 │       └── router.dart                 ← go_router navigation
 │
 ├── pubspec.yaml                         ← Dependencies Flutter

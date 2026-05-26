@@ -1,4 +1,4 @@
-# BUSINESS MODEL CANVAS (BMC) - EduBend
+# BUSINESS MODEL CANVAS (BMC) - EduFlow
 
 > **Gamified Educational Micro-learning + Demokratisasi Feynman AI**
 > Platform pembelajaran berbasis AI yang mentransformasikan konsumsi media digital pasif siswa menjadi aktivitas belajar mikro yang terstruktur, terverifikasi, dan terjangkau secara inklusif.
@@ -43,7 +43,7 @@ block-beta
 
 ## 1. CUSTOMER SEGMENTS - Target Pasar dan Segmentasi
 
-EduBend melayani 3 segmen utama dalam ekosistem pembelajaran multi-sisi (multi-sided platform):
+EduFlow melayani 3 segmen utama dalam ekosistem pembelajaran multi-sisi (multi-sided platform):
 
 ### A. Siswa (Gen Z & Gen Alpha) - Pengguna Utama
 - **Profil Demografis:** Pelajar SMP & SMA usia 12-18 tahun di seluruh Indonesia.
@@ -73,7 +73,7 @@ EduBend melayani 3 segmen utama dalam ekosistem pembelajaran multi-sisi (multi-s
 
 ## 2. VALUE PROPOSITIONS - Proposisi Nilai
 
-EduBend menawarkan proposisi nilai unik (UVP) yang membedakan platform ini dari EdTech konvensional:
+EduFlow menawarkan proposisi nilai unik (UVP) yang membedakan platform ini dari EdTech konvensional:
 
 ### Tagline UVP:
 > **"Mentransformasikan konsumsi media digital pasif menjadi aktivitas pembelajaran aktif yang terukur dengan demokratisasi bimbingan belajar berbasis AI."**
@@ -162,7 +162,7 @@ EduBend menawarkan proposisi nilai unik (UVP) yang membedakan platform ini dari 
 
 ## 5. REVENUE STREAMS - Struktur Pendapatan
 
-EduBend menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimalkan diversifikasi pendapatan dengan profitabilitas tinggi:
+EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimalkan diversifikasi pendapatan dengan profitabilitas tinggi:
 
 ### Stream 1: B2B SaaS Flat Rate - Sekolah Negeri (Pendapatan Utama)
 
@@ -401,7 +401,7 @@ TOTAL  180      Rp 439.000.000 Rp 149.305.000   ROI Investasi 124,37%
 
 ```mermaid
 mindmap
-  root((EduBend MOAT))
+  root((EduFlow MOAT))
     Teknologi
       Self-Hosted Whisper Rp 0
       Gemini Flash Rp 97/hit
@@ -424,7 +424,7 @@ mindmap
       Multi-creator per Chapter
 ```
 
-| Parameter | EduBend | Ruangguru | Zenius | Quipper |
+| Parameter | EduFlow | Ruangguru | Zenius | Quipper |
 |---|---|---|---|---|
 | **Format Belajar** | Video pendek + Voice Note AI | Video panjang 15-60 menit | Video panjang + kelas interaktif | Video panjang |
 | **Metode Asesmen** | Lisan (Feynman AI Voice Note) | Pilihan ganda berbasis ingatan | Pilihan ganda berbasis ingatan | Pilihan ganda |
