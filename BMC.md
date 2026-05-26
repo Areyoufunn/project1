@@ -12,7 +12,7 @@ block-beta
     columns 5
 
     block:KP:1
-        A["KEY PARTNERS<br/>• Dinas Pendidikan Daerah<br/>• Sekolah Negeri (Kepsek)<br/>• Content Creator Edukasi<br/>• Google (Gemini via OpenRouter)<br/>• Meta/OpenAI (Whisper OS)<br/>• Cloudflare Stream"]
+        A["KEY PARTNERS<br/>• Dinas Pendidikan Daerah<br/>• Sekolah Negeri & Kepsek<br/>• Mitra Marketplace SIPLah<br/>• Content Creator Edukasi<br/>• Google (Gemini via OpenRouter)<br/>• RunPod (Whisper Serverless)<br/>• Kemenkumham (PT & HAKI)"]
     end
     block:KAKR:1
         B["KEY ACTIVITIES<br/>• Platform Dev (Laravel, Flutter)<br/>• Operasi Async AI Pipeline<br/>• Sosialisasi & Kemitraan Sekolah<br/>• Kurasi & Insentif Kreator"]
@@ -20,15 +20,15 @@ block-beta
         C["KEY RESOURCES<br/>• Algoritma Content Selection<br/>• Pipeline AI Feynman (Whisper/Gemini)<br/>• Tech Stack (Flutter, Laravel)<br/>• 2 Devs (AI Vibe Coding)<br/>• CapEx Awal & Staged OpEx"]
     end
     block:VP:1
-        D["VALUE PROPOSITIONS<br/>• Gamified Micro-learning Video<br/>• Checkpoint Voice Note (Feynman AI)<br/>• Dual Nav (Roadmap vs Discover)<br/>• Flat-Rate Dana BOS Rp 400rb/bln<br/>• B2B Dashboard Analitik Guru<br/>• Creator Fund & Gift RPM"]
+        D["VALUE PROPOSITIONS<br/>• Gamified Micro-learning Video<br/>• Checkpoint Voice Note (Feynman AI)<br/>• Dual Nav (Roadmap vs Discover)<br/>• Flat-Rate Dana BOS Rp 400rb/bln<br/>• B2B Dashboard Analitik Guru<br/>• Legalitas & Akuntabilitas SIPLah"]
     end
     block:CRCH:1
-        E["CUSTOMER RELATIONSHIPS<br/>• Siswa: Automated & Gamified (Streak/XP)<br/>• Sekolah: Dedicated CS & Training<br/>• Creator: Community Support Dashboard"]
+        E["CUSTOMER RELATIONSHIPS<br/>• Siswa: Automated & Gamified (Streak/XP)<br/>• Sekolah: Dedicated CS & Onboarding<br/>• Creator: Community Support Dashboard"]
         space
-        F["CHANNELS<br/>• Flutter Mobile App (iOS/Android)<br/>• Next.js Web Admin Dashboard<br/>• Invite Code System (B2B)<br/>• Direct B2B Sales (Dinas/Kepsek)"]
+        F["CHANNELS<br/>• Flutter Mobile App (iOS/Android)<br/>• Next.js Web Admin Dashboard<br/>• Portal SIPLah & ARKAS (B2B)<br/>• Direct B2B Pitching (Dinas/Kepsek)"]
     end
     block:CS:1
-        G["CUSTOMER SEGMENTS<br/>• Siswa Gen Z & Alpha (12-18 thn)<br/>• Sekolah Negeri (Dana BOS)<br/>• Creator Edukasi (Guru & Tutor)"]
+        G["CUSTOMER SEGMENTS<br/>• Siswa Gen Z & Alpha (12-18 thn)<br/>• Sekolah Negeri (Penerima BOS)<br/>• Creator Edukasi (Guru & Tutor)"]
     end
 
     block:COST:3
@@ -169,12 +169,13 @@ EduBend menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | Parameter | Nilai |
 |---|---|
 | **Harga** | **Rp 400.000 / sekolah / bulan** (Akses tak terbatas untuk siswa sekolah mitra) |
-| **Sumber Anggaran Pelanggan** | Alokasi Dana BOS (Biaya Operasional Sekolah) |
+| **Sumber Anggaran Pelanggan** | Alokasi Dana BOS (Bantuan Operasional Satuan Pendidikan) |
+| **Saluran Pembayaran** | Wajib Transaksi via **SIPLah** & Perencanaan via **ARKAS** |
 | **Value yang Diterima** | Lisensi dashboard analitik kognitif guru + bulk invite code |
 | **Margin Kontribusi** | **Rp 170.000 / sekolah / bulan** (HPP Rp 230.000, asumsi 25-30 DAU per sekolah) |
 | **Frekuensi** | Pendapatan berulang bulanan (kontrak berbasis semester atau tahunan) |
 
-**Justifikasi Strategis B2B Sekolah Negeri:** Pemanfaatan Dana BOS memberikan stabilitas arus kas startup dan memangkas siklus penjualan ritel B2C yang lambat karena tidak memerlukan persetujuan wali murid secara individu. Satu kontrak sekolah langsung menjaring ratusan pengguna aktif.
+**Justifikasi Strategis B2B Sekolah Negeri:** Pemanfaatan Dana BOS diatur legal dalam [Permendikbudristek No. 63 Tahun 2022](https://jdih.kemdikbud.go.id/detail_peraturan?main=3238). Model flat-rate ini hanya mengambil **1,45%** dari total rata-rata anggaran BOS tahunan sekolah menengah (~Rp 330jt/tahun), menjadikannya sangat terjangkau bagi sekolah dan memberikan stabilitas arus kas tinggi (*stable recurring revenue*) bagi platform.
 
 ### Stream 2: B2C Ad-Supported (Skala Volume)
 
@@ -193,7 +194,7 @@ EduBend menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 |---|---|
 | **Harga** | **Rp 19.000 / siswa / bulan** |
 | **Benefit** | Bebas iklan, akses tanpa batas ke evaluasi AI, dan fitur belajar eksklusif |
-| **HPP** | ~Rp 19.429 / bulan (sudah termasuk biaya payment gateway Rp 3.000 dan alokasi bagi hasil kreator) |
+| **HPP** | **Rp 19.429 / siswa / bulan** (Breakdown: Rp 3.000 PG [Midtrans/Xendit] + Rp 5.700 Kreator 30% + Rp 10.729 API Gemini/Cloudflare Stream) |
 
 ### Stream 4: Creator Economy Revenue Share (Ancillary)
 
@@ -237,13 +238,13 @@ EduBend menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 
 ### C. Sumber Daya Manusia
 
-| Peran | Jumlah | Pendekatan Kerja |
+| Peran | Status | Pendekatan Kerja |
 |---|---|---|
-| Backend Developer | 1 orang | AI-assisted software engineering (Vibe Coding methodology) |
-| Frontend & Mobile Developer | 1 orang | AI-assisted software engineering (Vibe Coding methodology) |
-| UI/UX & Asset Designer | 1 orang (Kontrak) | Pengembangan aset visual, Lottie animation, dan identitas merek |
+| Backend Developer | **Tim Founder (Sweat Equity)** | AI-assisted software engineering (Vibe Coding methodology) |
+| Frontend & Mobile Developer | **Tim Founder (Sweat Equity)** | AI-assisted software engineering (Vibe Coding methodology) |
+| UI/UX & Asset Designer | **Tim Founder (Sweat Equity)** | Pengembangan aset visual, Lottie animation, dan identitas merek |
 
-**Analisis Efisiensi SDM:** Penggunaan metodologi AI-assisted development memangkas durasi pengembangan proyek menjadi hanya 5 minggu dengan tim inti yang efisien, menghemat biaya overhead operasional awal startup.
+**Analisis Efisiensi SDM:** Seluruh pengembangan (Backend, Frontend/Mobile, UI/UX) dikerjakan sepenuhnya oleh tim founder (co-founder mahasiswa) — **zero outsourcing cost**. Metodologi AI-assisted Vibe Coding memungkinkan penyelesaian produk dalam 5 minggu dengan *actual cash out* hanya **Rp 7.500.000**.
 
 ### D. Sumber Daya Finansial
 
@@ -303,25 +304,41 @@ EduBend menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 
 ### A. Pengeluaran Modal (CapEx)
 
+**Sweat Equity — Tim Founder (Non-Cash, Nilai Setara Pasar):**
+
+| No | Komponen | Status | Nilai Setara Pasar |
+|---|---|---|---|
+| 1 | Backend Developer (5 Minggu) | **Sweat Equity** | Rp 12.000.000 |
+| 2 | Frontend & Mobile Developer (5 Minggu) | **Sweat Equity** | Rp 12.000.000 |
+| 3 | UI/UX & Asset Designer | **Sweat Equity** | Rp 4.000.000 |
+| | **Sub-Total Sweat Equity** | *(Tidak keluar kas)* | **Rp 28.000.000** |
+
+**Actual Cash Disbursement — Pengeluaran Kas Nyata:**
+
 | No | Komponen | Anggaran |
 |---|---|---|
-| 1 | Backend Developer (Fase Pengembangan 5 Minggu) | Rp 12.000.000 |
-| 2 | Frontend & Mobile Developer (Fase Pengembangan 5 Minggu) | Rp 12.000.000 |
-| 3 | UI/UX & Asset Designer (Kontrak Aset Visual) | Rp 4.000.000 |
-| 4 | Deposit Kredit Awal API AI | Rp 1.500.000 |
+| 4 | AI Tools & OpenRouter Credit (Cursor Pro, Copilot, API) | Rp 1.500.000 |
 | 5 | Insentif Kreator Tahap Awal (Cold Start) | Rp 3.000.000 |
 | 6 | Pendirian PT Perorangan & Pendaftaran Paten HAKI | Rp 3.000.000 |
-| **TOTAL CapEx** | | **Rp 35.500.000** |
+| | **Sub-Total Cash Out** | **Rp 7.500.000** |
+
+| Kategori | Nilai |
+|---|---|
+| Sweat Equity Tim Founder (Non-Cash) | Rp 28.000.000 |
+| Actual Cash Disbursement | Rp 7.500.000 |
+| **TOTAL NILAI PROYEK (CapEx)** | **Rp 35.500.000** |
+| **MODAL KAS YANG DIBUTUHKAN** | **Rp 7.500.000** |
 
 ### B. Biaya Variabel per Siswa (COGS)
 
 | Komponen Biaya | B2B Sekolah | B2C Gratis | B2C Premium |
 |---|---|---|---|
 | Transkripsi Suara (Whisper Lokal) | Rp 0 | Rp 0 | Rp 0 |
-| LLM Evaluation (Gemini 1.5 Flash) | Rp 5.820 (Asumsi 60 checkpoint) | ~Rp 1.455 (Asumsi 15 checkpoint) | Variabel |
-| Bandwidth Video (Cloudflare Stream) | Rp 1.600 | ~Rp 242 | Variabel |
-| Kontribusi Creator Fund (Bagi Hasil) | Rp 400 | Rp 200 | Termasuk bagi hasil |
-| **Total HPP / siswa / bulan** | **Rp 7.820** | **~Rp 1.897** | **~Rp 19.429** |
+| LLM Evaluation (Gemini 1.5 Flash) | Rp 5.820 (Asumsi 60 checkpoint) | ~Rp 1.455 (Asumsi 15 checkpoint) | Rp 9.700 (Asumsi 100 checkpoint) |
+| Bandwidth Video (Cloudflare Stream) | Rp 1.600 | ~Rp 242 | Rp 1.029 (Asumsi 64 mnt) |
+| Payment Gateway Fee (VA/Bank) | Rp 0 (Diserap SIPLah) | Rp 0 (Gratis) | Rp 3.000 (Flat Midtrans/Xendit) |
+| Kontribusi Creator Fund (Bagi Hasil) | Rp 400 | Rp 200 | Rp 5.700 (Porsi 30% Platform) |
+| **Total HPP / siswa / bulan** | **Rp 7.820** | **~Rp 1.897** | **Rp 19.429** |
 
 ### C. Pengeluaran Operasional Bulanan (OpEx)
 
@@ -330,10 +347,13 @@ EduBend menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | Server Cloud & Database Hosting | Rp 150.000 | Rp 750.000 | Rp 1.800.000 |
 | Lisensi Layanan SaaS Pendukung | Rp 150.000 | Rp 300.000 | Rp 500.000 |
 | Biaya Sosialisasi & Hubungan Dinas | Rp 500.000 | Rp 1.500.000 | Rp 2.000.000 |
-| Tim Operasional & Layanan Pelanggan | Rp 0 | Rp 2.000.000 | Rp 5.600.000 |
+| Tim Operasional & Layanan Pelanggan | Rp 0 (Dev-run) | Rp 2.000.000 | Rp 5.600.000 |
 | **TOTAL OpEx Bulanan** | **Rp 800.000** | **Rp 4.550.000** | **Rp 9.900.000** |
 
-**Justifikasi Strategis Staged Scaling:** Struktur OpEx dirancang bertahap untuk menyelaraskan pengeluaran dengan pertumbuhan pendapatan riil guna meminimalkan burn rate kas awal perusahaan.
+**Justifikasi Strategis Staged Scaling & UMK Compliance:**
+* Struktur OpEx dirancang bertahap untuk meminimalkan burn rate kas awal startup sebelum memperoleh margin stabil dari sekolah mitra.
+* Alokasi CS & Tim Pendukung Tahap 3 sebesar **Rp 5.600.000** untuk mempekerjakan **2 orang staff CS junior full-time** (@ Rp 2.800.000/bulan) sangat patuh dan di atas standard UMK kota pendidikan lapis kedua (seperti UMK Yogyakarta Rp 2.400.000 atau UMK Surakarta Rp 2.200.000).
+* Pos Pemasaran dialokasikan untuk operasional roadshow, presentasi luring (*pitching*) dinas pendidikan daerah, dan pencetakan kurikulum brosur sekolah.
 
 ---
 
@@ -456,7 +476,7 @@ graph TD
 | **Key Resources** | Algoritma Content Score, pipeline transkripsi lokal + Gemini LLM, efisiensi tim developer berpasangan |
 | **Key Activities** | Siklus rilis produk cepat (5 minggu), kemitraan strategis dinas pendidikan, operasional AI asinkron |
 | **Key Partners** | Dinas Pendidikan, Kepala Sekolah mitra, kontributor kreator, Google AI, Cloudflare CDN |
-| **Cost Structure** | CapEx pengembangan Rp 35.500.000, margin unit economics COGS Rp 7.820, target OpEx ekspansi Rp 9.900.000 |
+| **Cost Structure** | CapEx total Rp 35.500.000 (Sweat Equity Rp 28jt + Cash Rp 7.5jt), COGS/siswa B2B Rp 7.820, OpEx ekspansi Rp 9.900.000/bln |
 
 ---
 
