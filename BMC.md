@@ -32,10 +32,10 @@ block-beta
     end
 
     block:COST:3
-        H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (2 Devs, UI/UX, Legal, Cold Start)<br/>• COGS/Siswa/Bulan: B2B Rp 7.820, B2C Gratis Rp 1.897<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt"]
+        H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (Tim Founder, Legal PT/HAKI via OSS/DJKI)<br/>• COGS/Siswa/Bulan: B2B Rp 7.820, B2C Gratis Rp 1.897, Premium Rp 19.429<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt (Kepatuhan UMK)"]
     end
     block:REV:2
-        I["REVENUE STREAMS<br/>• B2B SaaS Flat Rate: Rp 400rb/sekolah/bulan (Dana BOS)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan<br/>• B2C Premium: Rp 19.000/siswa/bulan (Unlimited AI)<br/>• Creator Revenue Share (30% Platform / 70% Creator)"]
+        I["REVENUE STREAMS<br/>• B2B SaaS Flat Rate: Rp 400rb/sekolah/bulan (BOS via SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan (eCPM Rp 16)<br/>• B2C Premium: Rp 19.000/siswa/bulan (Tanpa Iklan)<br/>• Creator Revenue Share (30% Platform : 70% Creator)"]
     end
 ```
 
