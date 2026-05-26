@@ -1,7 +1,7 @@
-# 🛠️ TECH STACK — EduFlow
+# 🛠️ TECH STACK — EduBend
 
 > Dokumen ini menjelaskan bahasa pemrograman, framework, tools,
-> dan struktur file lengkap untuk project EduFlow.
+> dan struktur file lengkap untuk project EduBend.
 
 ---
 
@@ -19,13 +19,16 @@
 └───────┬─────────────────────────────────────────────┘
         │ Queue (Redis)
 ┌───────▼─────────────────────────────────────────────┐
-│              AI PROCESSING LAYER                    │
-│  OpenAI Whisper (transkripsi) + GPT-4o (scoring)   │
+│              AI PROCESSING LAYER (Optimized)        │
+│  Self-Hosted faster-whisper (STT, Rp 0)             │
+│  + Gemini 1.5 Flash via OpenRouter (scoring, Rp 97) │
+│  Audio file → DELETE INSTANTLY setelah transkripsi  │
 └─────────────────────────────────────────────────────┘
         │
 ┌───────▼─────────────────────────────────────────────┐
 │              STORAGE LAYER                          │
-│  MySQL (data) │ Redis (cache/queue) │ S3/CF (media) │
+│  MySQL (data) │ Redis (cache/queue) │ CF Stream (video) │
+│  ⚠️ Audio TIDAK disimpan — dihapus instan (privasi) │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -43,8 +46,8 @@
 | Queue | Laravel Queue + Redis | latest |
 | ORM | Eloquent | built-in |
 | Validation | Laravel FormRequest | built-in |
-| AI SDK | openai-php/laravel | latest |
-| Storage | league/flysystem-aws-s3-v3 | latest |
+| AI - STT | `faster-whisper` (via Python subprocess / dedicated worker) | latest |
+| AI - LLM | OpenRouter PHP (HTTP client ke openrouter.ai) | latest |
 | Cache | predis/predis (Redis) | latest |
 
 **Kenapa Laravel?**
@@ -107,15 +110,17 @@
 
 ### 🗄️ Database & Infrastructure
 
-| Layer | Teknologi | Fungsi |
-|---|---|---|
-| **Database Utama** | MySQL 8.0 | Semua data aplikasi |
-| **Cache & Queue** | Redis | Session, queue job async |
-| **Video Storage** | Cloudflare Stream | Upload & streaming video konten |
-| **Audio Storage** | AWS S3 | Simpan file voice note .m4a |
-| **AI Transkripsi** | OpenAI Whisper API | Speech-to-text voice note |
-| **AI Scoring** | OpenAI GPT-4o | Analisa pemahaman dari transkrip |
-| **Runtime** | Laragon (local) / Docker (production) | — |
+| Layer | Teknologi | Fungsi | Biaya |
+|---|---|---|---|
+| **Database Utama** | MySQL 8.0 | Semua data aplikasi | Termasuk VPS |
+| **Cache & Queue** | Redis | Session, queue job async | Termasuk VPS / Upstash free tier |
+| **Video Storage** | Cloudflare Stream | Upload & streaming video konten | $1/1.000 mnt delivered |
+| **Audio Storage** | ~~AWS S3~~ → **Tidak ada** | Audio **dihapus instan** setelah ditranskripsi | **Rp 0** |
+| **AI Transkripsi** | **Self-Hosted faster-whisper** (model `base`/`tiny`) | Speech-to-text voice note tanpa biaya API | **Rp 0** |
+| **AI Scoring** | **Gemini 1.5 Flash via OpenRouter** | Analisa pemahaman dari transkrip lisan | ~Rp 97/evaluasi |
+| **Runtime** | Laragon (local) / VPS Linux (production) | — | — |
+
+> 💡 **Mengapa bukan OpenAI?** Self-Hosted Whisper + Gemini Flash menghemat **95% biaya AI** dibanding OpenAI Whisper API + GPT-4o, dengan performa setara untuk kasus penggunaan evaluasi suara pendek (30-120 detik).
 
 ---
 
@@ -172,11 +177,11 @@ backend/
 │   │   └── StudentAnalytic.php
 │   │
 │   ├── Services/                         ← Business Logic (bukan di Controller!)
-│   │   ├── OpenAI/
-│   │   │   ├── WhisperService.php        ← Panggil Whisper API
-│   │   │   └── LLMScoringService.php     ← Panggil GPT-4o untuk scoring
+│   │   ├── AI/
+│   │   │   ├── WhisperService.php        ← Transkripsi via faster-whisper (Self-Hosted/RunPod)
+│   │   │   └── LLMScoringService.php     ← Evaluasi kognitif via Gemini 1.5 Flash (OpenRouter)
 │   │   ├── ContentScoreService.php       ← Hitung algoritma TikTok
-│   │   ├── VoiceNoteService.php          ← Orchestrate proses voice note
+│   │   ├── VoiceNoteService.php          ← Orchestrate proses voice note (Hapus instan setelah transkripsi)
 │   │   ├── ContentModerationService.php  ← AI review konten creator
 │   │   └── StudentXPService.php          ← Hitung XP & streak
 │   │
@@ -257,7 +262,7 @@ mobile/
 │   │
 │   └── config/
 │       ├── api_config.dart             ← BASE_URL
-│       ├── theme.dart                  ← Warna, typography app
+│       ├── theme.dart                  ← Warna EduBend: BG #0A1931 | Button #1A3D63 | Accent #4A7FA7 | Logo #B3CFE5 | Surface #F6FAFD
 │       └── router.dart                 ← go_router navigation
 │
 ├── pubspec.yaml                         ← Dependencies Flutter
@@ -331,18 +336,18 @@ admin/
 ## 🚀 Alur Data End-to-End
 
 ```
-[VOICE NOTE FLOW - ASYNC]
+[VOICE NOTE FLOW - ASYNC & OPTIMIZED]
 
 Mobile                  Backend               Queue Worker
   │                        │                       │
   ├─ POST /voice-notes ───►│                       │
-  │                        ├── Simpan di S3         │
-  │                        ├── Status: "uploading"  │
+  │                        ├── Simpan Lokal Temp   │
+  │                        ├── Status: "processing"│
   │                        ├── Dispatch Job ────────►│
-  │◄── { id, "processing" }│                       ├── Whisper API
-  │                        │                       ├── Transkrip selesai
-  ├─ GET /voice-notes/5 ──►│                       ├── LLM GPT-4o scoring
-  │◄── { "processing" }    │                       ├── Update DB
+  │◄── { id, "processing" }│                       ├── faster-whisper (STT)
+  │                        │                       ├── Transkrip Selesai
+  ├─ GET /voice-notes/5 ──►│                       ├── Gemini 1.5 Flash (Scoring)
+  │◄── { "processing" }    │                       ├── Update DB & DELETES Audio
   │                        │◄── Update status ─────┤
   ├─ GET /voice-notes/5 ──►│    "scored"           │
   │◄── { score: 82,        │                       │
