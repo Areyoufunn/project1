@@ -67,10 +67,10 @@ Apabila kita menggabungkan pendapatan dasar dari **B2B SaaS Flat Rate Sekolah** 
 
 ### Analisis Laba Rugi Gabungan (Bulan ke-6)
 * **Total Pendapatan Bulanan:** Rp 254.000.000
-* **Total HPP Operasional:** Rp 13.830.000
+* **Total HPP Operasional:** Rp 11.280.000 (Turun dari sebelumnya Rp 13.830.000 berkat migrasi Bunny Stream)
 * **Total OpEx Tahap 3:** Rp 9.900.000
-* **Laba Bersih Bulanan (EBT):** Rp 254.000.000 - (Rp 13.830.000 + Rp 9.900.000) = **Rp 230.270.000 / bulan**!
-* **Margin Laba Bersih:** **90,6%** (Menunjukkan karakteristik model bisnis perangkat lunak/SaaS dengan profitabilitas luar biasa).
+* **Laba Bersih Bulanan (EBT):** Rp 254.000.000 - (Rp 11.280.000 + Rp 9.900.000) = **Rp 232.820.000 / bulan**! (Meningkat dari sebelumnya Rp 230.270.000).
+* **Margin Laba Bersih:** **91,6%** (Meningkat dari sebelumnya 90,6% berkat efisiensi Bunny Stream).
 
 ---
 

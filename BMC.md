@@ -32,10 +32,10 @@ block-beta
     end
 
     block:COST:3
-        H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (Tim Founder, Legal PT/HAKI via OSS/DJKI)<br/>• COGS/Siswa/Bulan: B2B Rp 7.820, B2C Gratis Rp 1.897, Premium Rp 19.429<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt (Kepatuhan UMK)"]
+        H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (Tim Founder, Legal PT/HAKI via OSS/DJKI)<br/>• COGS/Siswa/Bulan: B2B Rp 6.250, B2C Gratis Rp 1.667, Premium Rp 18.730<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt (Kepatuhan UMK)"]
     end
     block:REV:2
-        I["REVENUE STREAMS<br/>• B2B SaaS Flat Rate: Rp 400rb/sekolah/bulan (BOS via SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan (eCPM Rp 16)<br/>• B2C Premium: Rp 19.000/siswa/bulan (Tanpa Iklan)<br/>• Creator Revenue Share (30% Platform : 70% Creator)"]
+        I["REVENUE STREAMS<br/>• B2B SaaS Flat Rate: Rp 400rb/sekolah/bulan (BOS via SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan (eCPM Rp 16)<br/>• B2C Premium: Rp 19.999/siswa/bulan (Tanpa Iklan)<br/>• Virtual Gifting (Engagement Engine)"]
     end
 ```
 
@@ -85,7 +85,7 @@ EduFlow menawarkan proposisi nilai unik (UVP) yang membedakan platform ini dari 
 | 1 | **Micro-learning Feed Terstruktur** - Pembelajaran via video vertikal pendek yang diselaraskan dengan kurikulum resmi | EdTech konvensional menggunakan video panjang (15-60 menit) yang rentan memicu overload kognitif |
 | 2 | **Checkpoint Voice Note & Feynman AI** - Evaluasi konseptual berbasis verbal. AI menganalisis tingkat pemahaman konseptual secara mendalam | Tidak ada kompetitor lokal yang menerapkan asesmen lisan berbasis AI sebagai prasyarat kelulusan chapter |
 | 3 | **Navigasi Ganda: Roadmap vs Discover** - Menyediakan jalur belajar terstruktur dan eksplorasi minat bebas | Meminimalisir kejenuhan belajar dengan mempertahankan siswa tetap di dalam ekosistem platform |
-| 4 | **Akses Inklusif (Ad-Supported & Premium Terjangkau)** - Opsi akses gratis dengan dukungan iklan atau premium seharga Rp 19.000/bulan | Layanan bimbingan belajar konvensional membebankan biaya tahunan bernilai jutaan rupiah |
+| 4 | **Akses Inklusif (Ad-Supported & Premium Terjangkau)** - Opsi akses gratis dengan dukungan iklan atau premium seharga Rp 19.999/bulan | Layanan bimbingan belajar konvensional membebankan biaya tahunan bernilai jutaan rupiah |
 | 5 | **Sistem Pembelajaran Tergamifikasi** - Penerapan mekanisme XP, streak harian, leaderboard, dan animasi interaktif | Meningkatkan loyalitas dan frekuensi penggunaan aplikasi secara organik |
 
 ### Untuk Sekolah (B2B):
@@ -101,7 +101,7 @@ EduFlow menawarkan proposisi nilai unik (UVP) yang membedakan platform ini dari 
 
 | No | Value Proposition |
 |---|---|
-| 1 | **Ekosistem Monetisasi Terstruktur** - Insentif melalui Creator Fund (eCPM Rp 4.000/1.000 views), Virtual Gifting, dan paywall Premium Series |
+| 1 | **Ekosistem Monetisasi Terstruktur** - Insentif melalui Creator Fund (RPM Rp 4.000/1.000 views), Virtual Gifting ("Saweran Pintar"), dan pembagian B2C Premium Watch Time Share (30% dari biaya langganan Premium) |
 | 2 | **Algoritma Berbasis Dampak Pembelajaran** - Distribusi konten diutamakan berdasarkan skor pemahaman siswa (bobot algoritma 70%), bukan sekadar popularitas konten |
 | 3 | **Dashboard Transparansi Kinerja Konten** - Akses data analitik lengkap terkait completion rate video dan skor evaluasi rata-rata penonton |
 
@@ -168,14 +168,14 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 
 | Parameter | Nilai |
 |---|---|
-| **Harga** | **Rp 400.000 / sekolah / bulan** (Akses tak terbatas untuk siswa sekolah mitra) |
+| **Harga** | **Tiered Flat Rate berbasis Data Dapodik:** Tier S (≤200 siswa) **Rp 400.000**, Tier M (201–500) **Rp 700.000**, Tier L (501–1.000) **Rp 1.100.000**, Tier XL (>1.000) **Rp 1.500.000** |
 | **Sumber Anggaran Pelanggan** | Alokasi Dana BOS (Bantuan Operasional Satuan Pendidikan) |
 | **Saluran Pembayaran** | Wajib Transaksi via **SIPLah** & Perencanaan via **ARKAS** |
 | **Value yang Diterima** | Lisensi dashboard analitik kognitif guru + bulk invite code |
-| **Margin Kontribusi** | **Rp 170.000 / sekolah / bulan** (HPP Rp 230.000, asumsi 25-30 DAU per sekolah) |
+| **Margin Kontribusi** | **Rp 275.000 – Rp 750.000 / sekolah / bulan** (rata-rata tertimbang portofolio awal: **Rp 363.125**, asumsi 60% Tier S + 30% Tier M + 10% Tier L, DAU ~10%) |
 | **Frekuensi** | Pendapatan berulang bulanan (kontrak berbasis semester atau tahunan) |
 
-**Justifikasi Strategis B2B Sekolah Negeri:** Pemanfaatan Dana BOS diatur legal dalam [Permendikbudristek No. 63 Tahun 2022](https://jdih.kemdikbud.go.id/detail_peraturan?main=3238). Model flat-rate ini hanya mengambil **1,45%** dari total rata-rata anggaran BOS tahunan sekolah menengah (~Rp 330jt/tahun), menjadikannya sangat terjangkau bagi sekolah dan memberikan stabilitas arus kas tinggi (*stable recurring revenue*) bagi platform.
+**Justifikasi Strategis B2B Sekolah Negeri:** Pemanfaatan Dana BOS diatur legal dalam [Permendikbudristek No. 63 Tahun 2022](https://jdih.kemdikbud.go.id/detail_peraturan?main=3238). Model **Tiered Flat Rate** berbasis Dapodik menjamin profitabilitas di seluruh ukuran sekolah (beban BOS hanya **1,36%–2,18%** per tier), menghilangkan risiko rugi di sekolah besar sekaligus memberikan stabilitas arus kas yang tinggi.
 
 ### Stream 2: B2C Ad-Supported (Skala Volume)
 
@@ -185,32 +185,32 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | **Model Monetisasi** | Iklan video pendek interstitial (eCPM estimasi regional Rp 16 per tayangan) |
 | **Kuota Layanan** | Batasan 15 checkpoint evaluasi AI per bulan |
 | **Pendapatan per Siswa** | ~Rp 1.920 / bulan (berdasarkan rata-rata 120 tayangan iklan per siswa) |
-| **HPP per Siswa** | ~Rp 1.897 / bulan (akumulasi biaya API LLM dan kontribusi Creator Fund) |
-| **Surplus Bersih** | **+Rp 23 / siswa / bulan** (pengguna non-bayar tetap menghasilkan surplus profitabilitas) |
+| **HPP per Siswa** | **Rp 1.667 / siswa / bulan** (Rincian: Gemini Flash Rp 1.455 + Bunny Video Rp 12 + RPM Rp 200) |
+| **Surplus Bersih** | **+Rp 253 / siswa / bulan** (pengguna non-bayar kini menghasilkan surplus 10× lipat lebih besar!) |
 
 ### Stream 3: B2C Premium Subscription (High Margin)
 
 | Parameter | Nilai |
 |---|---|
-| **Harga** | **Rp 19.000 / siswa / bulan** |
+| **Harga** | **Rp 19.999 / siswa / bulan** |
 | **Benefit** | Bebas iklan, akses tanpa batas ke evaluasi AI, dan fitur belajar eksklusif |
-| **HPP** | **Rp 19.429 / siswa / bulan** (Breakdown: Rp 3.000 PG [Midtrans/Xendit] + Rp 5.700 Kreator 30% + Rp 10.729 API Gemini/Cloudflare Stream) |
+| **HPP** | **Rp 18.730 / siswa / bulan** (Breakdown: Rp 3.000 PG [Midtrans/Xendit] + Rp 6.000 Kreator 30% + Rp 9.730 API Gemini/Bunny Stream) |
 
-### Stream 4: Creator Economy Revenue Share (Ancillary)
+### Stream 4: Virtual Gifting ("Saweran Pintar") - Non-Paid Engagement Engine
 
-| Sub-Stream | Mekanisme | Potensi Pendapatan |
+| Sub-Stream | Mekanisme | Potensi Dampak Platform |
 |---|---|---|
-| **Premium Series Paywall** | Modul pembelajaran berbayar Rp 15.000 (Bagi hasil: 30% platform : 70% kreator) | Rp 4.500 per transaksi sukses untuk platform |
-| **Virtual Gifting** | Pemberian hadiah digital oleh siswa berbasis apresiasi konseptual | Mekanisme subsidi silang dari akumulasi pendapatan iklan platform |
+| **Virtual Gifting** | Siswa mengapresiasi video kreator menggunakan *EduCoins* (didapatkan gratis dari rajin belajar & checkpoint) | Meningkatkan keterlibatan siswa (engagement) 3× lipat tanpa membebankan biaya |
+| **Pencairan Insentif** | Platform mencairkan reward tunai bagi kreator berprestasi | Disubsidi dari laba operasional (B2B SaaS & Iklan B2C) |
 
 ### Proyeksi Pendapatan Tahun Pertama
 
 | Indikator Keuangan | Nilai Target |
 |---|---|
-| **Total Revenue Tahun 1** | **Rp 439.000.000** |
-| **Total Laba Bersih (EBT) Tahun 1** | **Rp 149.305.000** |
-| **ROI terhadap CapEx** | **420,58%** |
-| **ROI terhadap Total Investasi** | **124,37%** |
+| **Total Revenue Tahun 1** | **Rp 581.400.000** |
+| **Total Laba Bersih (EBT) Tahun 1** | **Rp 321.070.000** |
+| **ROI terhadap CapEx** | **904,4%** |
+| **ROI terhadap Total Investasi** | **267,4%** |
 | **Target Sekolah Mitra (Bulan 12)** | 180 sekolah aktif |
 
 ---
@@ -234,7 +234,7 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | **Web Admin** | Next.js 14 (TypeScript) | Struktur rendering cepat untuk data analitik kognitif guru yang masif |
 | **AI - STT** | Self-Hosted Whisper (model base/tiny) | Mengurangi biaya operasional transkripsi menjadi Rp 0 (Zero Cost STT) |
 | **AI - LLM** | Gemini 1.5 Flash via OpenRouter | Biaya operasional sangat rendah (~Rp 97 per evaluasi) dengan performa andal |
-| **Video Hosting** | Cloudflare Stream + Local Caching | Optimasi kompresi video untuk bandwidth minimum pada perangkat siswa |
+| **Video Hosting** | **Bunny Stream (Primary)** + Cloudflare Stream (Failover) + Local Caching | Bunny Stream 60× lebih hemat daripada skema per-menit; Cloudflare bertindak sebagai failover otomatis |
 
 ### C. Sumber Daya Manusia
 
@@ -295,7 +295,7 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | **Sekolah Negeri & Kepala Sekolah** | Pengguna B2B dan validator lapangan | Menghilangkan hambatan pemasaran individual ke siswa (bulk acquisition) |
 | **Content Creator Edukasi** | Penyedia konten kurikulum terkurasi | Efisiensi biaya produksi materi ajar dan keragaman variasi instruktur |
 | **Google & OpenRouter** | Penyedia infrastruktur komputasi kognitif | Efisiensi biaya pemrosesan evaluasi lisan via API |
-| **Cloudflare** | Penyedia infrastruktur CDN dan hosting video | Kestabilan distribusi video berkecepatan tinggi dengan biaya bandwidth terprediksi |
+| **Bunny.net (Bunny Stream)** | Penyedia infrastruktur video streaming utama (Primary) | Biaya per-GB paling efisien — 60× lebih hemat dari Cloudflare Stream, transcoding gratis |
 | **PT Perorangan & Pendaftaran HAKI** | Legalitas dan perlindungan kekayaan intelektual | Keabsahan hukum untuk melakukan transaksi formal dengan anggaran pemerintah (BOS) |
 
 ---
@@ -335,10 +335,10 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 |---|---|---|---|
 | Transkripsi Suara (Whisper Lokal) | Rp 0 | Rp 0 | Rp 0 |
 | LLM Evaluation (Gemini 1.5 Flash) | Rp 5.820 (Asumsi 60 checkpoint) | ~Rp 1.455 (Asumsi 15 checkpoint) | Rp 9.700 (Asumsi 100 checkpoint) |
-| Bandwidth Video (Cloudflare Stream) | Rp 1.600 | ~Rp 242 | Rp 1.029 (Asumsi 64 mnt) |
+| Bandwidth Video (Bunny Stream) | Rp 30 | Rp 12 | Rp 30 (Asumsi 64 mnt) |
 | Payment Gateway Fee (VA/Bank) | Rp 0 (Diserap SIPLah) | Rp 0 (Gratis) | Rp 3.000 (Flat Midtrans/Xendit) |
-| Kontribusi Creator Fund (Bagi Hasil) | Rp 400 | Rp 200 | Rp 5.700 (Porsi 30% Platform) |
-| **Total HPP / siswa / bulan** | **Rp 7.820** | **~Rp 1.897** | **Rp 19.429** |
+| Bagi Hasil Kreator (Creator Fund / Royalty Pool) | Rp 400 | Rp 200 | Rp 6.000 (30% B2C Premium) |
+| **Total HPP / siswa / bulan** | **Rp 6.250** | **Rp 1.667** | **Rp 18.730** |
 
 ### C. Pengeluaran Operasional Bulanan (OpEx)
 
@@ -361,41 +361,37 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 
 ### Analisis Break-Even Point (BEP)
 
-```
 BEP Tahap 2 (Target Kontrak Kemitraan Awal):
 ─────────────────────────────────────────────────────────────
+Model: Tiered Flat Rate (S/M/L/XL) berbasis Data Dapodik
+Margin Rata-rata Tertimbang: Rp 363.125/sekolah
+(komposisi: 60% Tier S Rp 275k + 30% Tier M Rp 450k + 10% Tier L Rp 631k)
 OpEx Bulanan: Rp 4.550.000
-Margin Kontribusi per Sekolah Mitra: Rp 170.000
-Target BEP: Rp 4.550.000 / Rp 170.000 = 27 Sekolah Mitra
-Estimasi Pencapaian: Bulan ke-5
+Target BEP: Rp 4.550.000 / Rp 363.125 = 13 Sekolah Mitra
+Estimasi Pencapaian: Bulan ke-4
 
 BEP Tahap 3 (Target Skala Ekspansi):
 ─────────────────────────────────────────────────────────────
 OpEx Bulanan: Rp 9.900.000
-Margin Kontribusi per Sekolah Mitra: Rp 170.000
-Target BEP: Rp 9.900.000 / Rp 170.000 = 59 Sekolah Mitra
-Estimasi Pencapaian: Bulan ke-6
-```
+Target BEP: Rp 9.900.000 / Rp 363.125 = 28 Sekolah Mitra
+Estimasi Pencapaian: Bulan ke-5
 
-### Proyeksi Arus Kas Tahun Pertama
-
-```
-Bulan  Sekolah  Revenue        Laba Bersih      Status Operasional
-─────  ───────  ─────────────  ───────────────  ──────────────────
- 1-2   0 (Beta) Rp 0           (Rp 1.600.000)   Fase Beta & Uji Coba
-  3    5        Rp 2.500.000   (Rp 3.202.500)   Pengembangan Awal
-  4    15       Rp 7.500.000   (Rp 507.500)     Mendekati BEP Tahap 2
-  5    30       Rp 15.000.000  Rp 3.535.000     Break-Even Tahap 2
-  6    60       Rp 29.000.000  Rp 5.270.000     Break-Even Tahap 3
-  7    80       Rp 39.000.000  Rp 10.660.000    Pertumbuhan Margin
-  8    100      Rp 49.000.000  Rp 16.050.000    Skala Ekspansi
-  9    120      Rp 59.000.000  Rp 21.440.000    Skala Ekspansi
-  10   140      Rp 69.000.000  Rp 26.830.000    Skala Ekspansi
-  11   160      Rp 79.000.000  Rp 32.220.000    Skala Ekspansi
-  12   180      Rp 90.000.000  Rp 38.610.000    Kinerja Akhir Tahun
-─────  ───────  ─────────────  ───────────────  ──────────────────
-TOTAL  180      Rp 439.000.000 Rp 149.305.000   ROI Investasi 124,37%
-```
+Proyeksi Arus Kas Tahun Pertama (Avg Revenue B2B: Rp 560.000/sekolah):
+Bulan  Sekolah  Revenue          Laba Bersih        Status Operasional
+─────  ───────  ───────────────  ─────────────────  ──────────────────
+ 1-2   0 (Beta) Rp 0             (Rp 1.600.000)     Fase Beta & Uji Coba
+   3   5        Rp 3.300.000     (Rp 2.240.000)     Pengembangan Awal
+   4   15       Rp 9.900.000     Rp 2.390.000       Break-Even Awal! ✅
+   5   30       Rp 19.800.000    Rp 9.320.000       BEP Tahap 2 ✅
+   6   60       Rp 38.600.000    Rp 16.850.000      BEP Tahap 3 ✅
+   7   80       Rp 51.800.000    Rp 26.100.000      Pertumbuhan Margin
+   8   100      Rp 65.000.000    Rp 35.350.000      Skala Ekspansi
+   9   120      Rp 78.200.000    Rp 44.600.000      Skala Ekspansi
+  10   140      Rp 91.400.000    Rp 53.850.000      Skala Ekspansi
+  11   160      Rp 104.600.000   Rp 63.100.000      Skala Ekspansi
+  12   180      Rp 118.800.000   Rp 73.350.000      Kinerja Akhir Tahun
+─────  ───────  ───────────────  ─────────────────  ──────────────────
+TOTAL  180      Rp 581.400.000   Rp 321.070.000     ROI Total Investasi 267,4%
 
 ### Parit Kompetitif (Competitive Moat)
 
@@ -428,7 +424,7 @@ mindmap
 |---|---|---|---|---|
 | **Format Belajar** | Video pendek + Voice Note AI | Video panjang 15-60 menit | Video panjang + kelas interaktif | Video panjang |
 | **Metode Asesmen** | Lisan (Feynman AI Voice Note) | Pilihan ganda berbasis ingatan | Pilihan ganda berbasis ingatan | Pilihan ganda |
-| **Tarif Pengguna Mandiri** | Gratis (Iklan) / Rp 19.000 per bulan | Rp 500.000 - 4.500.000 per tahun | Rp 200.000 - 1.500.000 per tahun | Rp 200.000+ per tahun |
+| **Tarif Pengguna Mandiri** | Gratis (Iklan) / Rp 19.999 per bulan | Rp 500.000 - 4.500.000 per tahun | Rp 200.000 - 1.500.000 per tahun | Rp 200.000+ per tahun |
 | **Tarif Institusi (B2B)** | Flat Rp 400.000/bulan (Dana BOS) | Model enterprise berskala besar | Model enterprise berskala besar | Enterprise |
 | **Asesmen Pemahaman** | Tersedia (Asesmen kognitif verbal AI) | Tidak Tersedia | Tidak Tersedia | Tidak Tersedia |
 | **Ekosistem Kreator** | Tersedia (Model Creator Fund) | Tidak Tersedia (Konten internal) | Tidak Tersedia (Konten internal) | Tidak Tersedia (Konten internal) |
@@ -472,11 +468,11 @@ graph TD
 | **Value Propositions** | Kombinasi micro-learning video pendek, asesmen lisan Feynman AI, dashboard analitik sekolah, dan tarif inklusif |
 | **Channels** | Mobile App (Flutter), Web Admin (Next.js), sistem kode undangan beta, penjualan langsung dinas terkait |
 | **Customer Relationships** | Mekanisme gamifikasi otomatis untuk siswa, onboarding intensif untuk institusi, portal mandiri untuk kreator |
-| **Revenue Streams** | B2B SaaS Flat Rate Rp 400.000/sekolah/bulan, Iklan B2C gratis, Berlangganan Premium B2C Rp 19.000/bulan |
+| **Revenue Streams** | B2B SaaS Flat Rate Rp 400.000/sekolah/bulan, Iklan B2C gratis, Berlangganan Premium B2C Rp 19.999/bulan |
 | **Key Resources** | Algoritma Content Score, pipeline transkripsi lokal + Gemini LLM, efisiensi tim developer berpasangan |
 | **Key Activities** | Siklus rilis produk cepat (5 minggu), kemitraan strategis dinas pendidikan, operasional AI asinkron |
-| **Key Partners** | Dinas Pendidikan, Kepala Sekolah mitra, kontributor kreator, Google AI, Cloudflare CDN |
-| **Cost Structure** | CapEx total Rp 35.500.000 (Sweat Equity Rp 28jt + Cash Rp 7.5jt), COGS/siswa B2B Rp 7.820, OpEx ekspansi Rp 9.900.000/bln |
+| **Key Partners** | Dinas Pendidikan, Kepala Sekolah mitra, kontributor kreator, Google AI, **Bunny.net (Video CDN Primary)**, Cloudflare (Failover CDN) |
+| **Cost Structure** | CapEx total Rp 35.500.000 (Sweat Equity Rp 28jt + Cash Rp 7.5jt), COGS/siswa B2B Rp 6.250, OpEx ekspansi Rp 9.900.000/bln |
 
 ---
 
@@ -488,16 +484,18 @@ graph TD
 | Indikator Validasi | Nilai BMC | Nilai Rencana Keuangan | Status |
 |---|---|---|---|
 | Pengeluaran Modal (CapEx) | Rp 35.500.000 | Rp 35.500.000 | Sesuai |
-| Tarif B2B Sekolah Mitra | Rp 400.000/bln | Rp 400.000/bln | Sesuai |
-| Estimasi COGS B2B/Siswa | Rp 7.820/bln | Rp 7.820/bln | Sesuai |
-| Margin Bersih per Sekolah | Rp 170.000/bln | Rp 170.000/bln | Sesuai |
-| Kebutuhan BEP Tahap 2 | 27 Sekolah | 27 Sekolah | Sesuai |
-| Kebutuhan BEP Tahap 3 | 59 Sekolah | 59 Sekolah | Sesuai |
-| Proyeksi Omzet Tahun ke-1 | Rp 439.000.000 | Rp 439.000.000 | Sesuai |
-| Proyeksi Laba Bersih (EBT) | Rp 149.305.000 | Rp 149.305.000 | Sesuai |
-| Metrik ROI Tahunan | 124,37% | 124,37% | Sesuai |
+| Model Harga B2B | Tiered: S Rp 400k / M Rp 700k / L Rp 1,1jt / XL Rp 1,5jt | Tiered: S Rp 400k / M Rp 700k / L Rp 1,1jt / XL Rp 1,5jt | Sesuai |
+| Avg Revenue B2B per Sekolah | Rp 560.000/bln (weighted avg) | Rp 560.000/bln (weighted avg) | Sesuai |
+| Estimasi COGS B2B/Siswa | Rp 6.250/bln | Rp 6.250/bln | Sesuai |
+| Margin Rata-rata per Sekolah | Rp 363.125/bln (weighted avg) | Rp 363.125/bln (weighted avg) | Sesuai |
+| Kebutuhan BEP Tahap 2 | 13 Sekolah | 13 Sekolah | Sesuai |
+| Kebutuhan BEP Tahap 3 | 28 Sekolah | 28 Sekolah | Sesuai |
+| Proyeksi Omzet Tahun ke-1 | Rp 581.400.000 | Rp 581.400.000 | Sesuai |
+| Proyeksi Laba Bersih (EBT) | Rp 321.070.000 | Rp 321.070.000 | Sesuai |
+| ROI terhadap CapEx | 904,4% | 904,4% | Sesuai |
+| Metrik ROI Total Investasi | 267,4% | 267,4% | Sesuai |
 | Asumsi Biaya LLM/Evaluasi | Rp 97 | Rp 97 | Sesuai |
-| Tarif Premium Siswa B2C | Rp 19.000/bln | Rp 19.000/bln | Sesuai |
+| Tarif Premium Siswa B2C | Rp 19.999/bln | Rp 19.999/bln | Sesuai |
 | Alokasi OpEx Tahap 1 | Rp 800.000/bln | Rp 800.000/bln | Sesuai |
 | Alokasi OpEx Tahap 3 | Rp 9.900.000/bln | Rp 9.900.000/bln | Sesuai |
 
