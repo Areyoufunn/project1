@@ -8,8 +8,8 @@ Dokumen ini menyajikan analisis keuangan lengkap untuk pengembangan dan operasio
 
 * **Model Bisnis Utama:** **Hibrida (Hybrid Model)**
 * **Model Harga B2B (Tiered Flat Rate):** Berbasis jumlah siswa di Dapodik — **Tier S** (≤200 siswa) Rp 400.000 / **Tier M** (201–500) Rp 700.000 / **Tier L** (501–1.000) Rp 1.100.000 / **Tier XL** (>1.000) Rp 1.500.000. Rata-rata revenue per sekolah = **Rp 560.000/bulan** (weighted avg).
-* **Break-Even Point (BEP):** Hanya membutuhkan **28 Sekolah Mitra** (Tahap 3) untuk menutup seluruh biaya operasional bulanan secara permanen. Target BEP Tahap 2 (kemitraan awal) bahkan hanya **13 Sekolah Mitra**.
-* **Proyeksi ROI Tahun Pertama:** ROI terhadap total investasi berkisar **-9,8% s.d. +267,4%** tergantung skenario pertumbuhan (konservatif 30 sekolah / moderat 80 sekolah / optimistis 180 sekolah). Unit economics per sekolah **selalu positif** di semua skenario.
+* **Break-Even Point (BEP):** Hanya membutuhkan **31 Sekolah Mitra** (Tahap 3) untuk menutup seluruh biaya operasional bulanan secara permanen. Target BEP Tahap 2 (kemitraan awal) bahkan hanya **15 Sekolah Mitra**.
+* **Proyeksi ROI Tahun Pertama:** ROI terhadap total investasi berkisar **-13,9% s.d. +172,5%** tergantung skenario pertumbuhan (konservatif 30 sekolah / moderat 80 sekolah / optimistis 180 sekolah). Unit economics per sekolah **selalu positif** di semua skenario.
 
 ---
 
@@ -22,7 +22,7 @@ HPP (*Cost of Goods Sold*) adalah biaya variabel langsung yang timbul saat siswa
 | Komponen Biaya | Arsitektur Konvensional (OpenAI API) | Arsitektur EduFlow Teroptimasi (Self-Hosted + OpenRouter) | Status Efisiensi |
 |---|---|---|---|
 | **Speech-to-Text (STT)** | Paid Whisper API: `$0.006` / menit (~Rp 96) | **Self-Hosted Whisper (Model `base` / `tiny`)** | **GRATIS (Rp 0)** |
-| **Evaluasi Semantik (LLM)** | OpenAI GPT-4o standar (~Rp 195 / hit) | **Gemini 1.5 Flash via OpenRouter** | **Hemat 95% (Rp 97 / hit)** |
+| **Evaluasi Semantik (LLM)** | OpenAI GPT-4o standar (~Rp 195 / hit) | **Gemini 2.5 Flash-Lite via OpenRouter** | **Hemat 94% (Rp 120 / hit)** |
 | **Penyimpanan Suara** | AWS S3 Storage bulanan (~Rp 500 / siswa) | **Dihapus Instan setelah Transkripsi** | **GRATIS (Rp 0)** |
 | **Kepatuhan Privasi Data** | Berisiko kebocoran data di cloud | 100% Aman (tidak menyimpan suara anak-anak) | **Sangat Aman** |
 
@@ -42,32 +42,32 @@ EduFlow mengadopsi model monetisasi kreator yang sejalan dengan visi **"100% Beb
 #### A. Jalur B2B Sekolah Negeri (Siswa Gratis Berkuota)
 Siswa dari sekolah mitra dibatasi kuota belajar **3 checkpoint lisan per hari** (20 hari sekolah aktif sebulan = 60 checkpoint).
 * **Self-Hosted Whisper (STT):** Rp 0
-* **OpenRouter Gemini 1.5 Flash:** 60 checkpoint x Rp 97 = **Rp 5.820 / siswa / bulan**
+* **OpenRouter Gemini 1.5 Flash:** 60 checkpoint x Rp 120 = **Rp 7.200 / siswa / bulan**
 * **Bunny Stream Video (Primary):** Rata-rata konsumsi 0,35 GB bandwidth per siswa/bulan (100 tayangan video pendek @ 3,5 MB) × tarif $0,005/GB × kurs Rp 16.000 = Rp 28/siswa/bulan. Dianggarkan dengan buffer pengaman = **Rp 30 / siswa / bulan**. (Ditambah opsi cadangan/secondary **Cloudflare Stream** seharga Rp 1.600/siswa/bulan).
 * **Porsi Creator Fund (RPM):** Mengasumsikan siswa memutar 100 video pendek sebulan = 100 views x (Rp 4.000 / 1.000) = **Rp 400 / siswa / bulan**
 * **Penyimpanan Suara:** Rp 0 (Langsung dihapus)
-* **TOTAL HPP B2B:** **Rp 6.250 / siswa / bulan** (Turun dari sebelumnya Rp 7.820)
+* **TOTAL HPP B2B:** **Rp 7.630 / siswa / bulan** (Penyesuaian ke model 2.5 Flash-Lite)
 
 #### B. Jalur B2C Mandiri Gratis (Didukung Iklan / Ad-Supported)
 Siswa umum gratis belajar mandiri diselingi iklan video pendek (eCPM Indonesia rata-rata Rp 16 per tayangan iklan).
-* **HPP Murni API & Video:** **Rp 1.467 / siswa / bulan** (Rincian: Gemini 1.5 Flash Rp 1.455 untuk 15 checkpoint gratis + Bunny Stream Video Rp 12 untuk 50 tayangan video dengan cache).
+* **HPP Murni API & Video:** **Rp 1.212 / siswa / bulan** (Rincian: Gemini 2.5 Flash-Lite Rp 1.200 untuk 10 checkpoint gratis + Bunny Stream Video Rp 12 untuk 50 tayangan video dengan cache).
 * **Porsi Creator Fund (RPM):** Mengasumsikan siswa memutar 50 video sebulan = 50 views x (Rp 4.000 / 1.000) = **Rp 200 / siswa / bulan**
 * **Pendapatan Iklan:** Jika siswa menonton 4 iklan video per hari (120 iklan sebulan), platform mendapatkan pendapatan:
   $$120 \text{ tayangan} \times \text{Rp } 16 = \text{Rp } 1.920 \text{ / siswa / bulan}$$
-* **Keuntungan Bersih Platform:** Pendapatan Iklan (Rp 1.920) - (HPP Murni Rp 1.467 + Porsi Creator Rp 200) = **+Rp 253 / bulan** per siswa gratisan.
+* **Keuntungan Bersih Platform:** Pendapatan Iklan (Rp 1.920) - (HPP Murni Rp 1.212 + Porsi Creator Rp 200) = **+Rp 508 / bulan** per siswa gratisan.
 
 #### C. Jalur B2C Mandiri Premium (Langganan Tanpa Iklan)
 Siswa umum berlangganan pribadi senilai **Rp 19.999 / bulan** untuk mematikan iklan dan mendapat akses penuh.
-* **HPP Variabel:** **Rp 18.730 / siswa / bulan**. Rincian HPP riil tanpa data mengambang:
+* **HPP Variabel:** **Rp 18.274 / siswa / bulan (Efisien via DOKU QRIS & e-Wallet)**. Rincian HPP riil tanpa data mengambang:
   - **Payment Gateway (PG) Fee:** **Rp 3.000 / transaksi** (Tarif flat standard transfer bank/VA via payment gateway mitra seperti [Midtrans](https://midtrans.com/pricing) atau [Xendit](https://xendit.co/id/harga/)).
   - **Bagi Hasil Kreator Konten (30%):** 30% x Rp 19.999 = **Rp 6.000 / siswa / bulan** (Dana apresiasi royalti bagi kreator berdasarkan proporsi tayangan video mereka yang ditonton oleh pelanggan premium — mirip dengan skema YouTube Premium).
   - **HPP API & Streaming Video (Tanpa Batasan Kuota / High Usage):**
-    - Gemini 1.5 Flash via OpenRouter (100 checkpoint lisan): 100 x Rp 97 = **Rp 9.700 / siswa / bulan**.
+    - Gemini 2.5 Flash-Lite via OpenRouter (100 checkpoint lisan): 100 x Rp 120 = **Rp 12.000 / siswa / bulan**.
     - Bunny Stream Video (64 tayangan ditonton): Rata-rata 0,35 GB bandwidth × $0,005/GB × kurs Rp 16.000 = Rp 28, dibulatkan **Rp 30 / siswa / bulan**. (Opsi cadangan Cloudflare Stream seharga Rp 1.029).
-    - *Sub-Total HPP Penggunaan:* Rp 9.700 + Rp 30 = **Rp 9.730 / siswa / bulan**.
-  - **Total HPP B2C Premium:** Rp 3.000 (PG) + Rp 6.000 (Kreator) + Rp 9.730 (Penggunaan) = **Rp 18.730 / siswa / bulan** ✓
+    - *Sub-Total HPP Penggunaan:* Rp 12.000 + Rp 30 = **Rp 12.030 / siswa / bulan**.
+  - **Total HPP B2C Premium:** Rp 3.000 (PG) + Rp 6.000 (Kreator) + Rp 9.730 (Penggunaan) = **Rp 18.274 / siswa / bulan (Efisien via DOKU QRIS & e-Wallet)** ✓
 
-> 💡 **Catatan Margin B2C Premium:** Berkat migrasi ke Bunny Stream dan penyesuaian harga ke Rp 19.999, segmen B2C Premium kini menghasilkan keuntungan bersih positif sebesar **+Rp 1.269 / siswa / bulan** — lebih dari 2× lipat dibanding sebelumnya! Ini semakin mengokohkan struktur finansial EduFlow, sementara sumber laba terbesar tetap berada pada segmentasi B2B Sekolah Mitra (margin Rp 212.500/sekolah/bulan).
+> 💡 **Catatan Margin B2C Premium:** Berkat migrasi ke Bunny Stream dan penyesuaian harga ke Rp 19.999, segmen B2C Premium kini menghasilkan keuntungan bersih positif sebesar **+Rp 1.725 / siswa / bulan** (Strategi hemat PG via QRIS/E-wallet saja) — lebih dari 2× lipat dibanding sebelumnya! Ini semakin mengokohkan struktur finansial EduFlow, sementara sumber laba terbesar tetap berada pada segmentasi B2B Sekolah Mitra (margin Rp 212.500/sekolah/bulan).
 
 ---
 
@@ -178,10 +178,10 @@ Model **flat rate tunggal** berpotensi menciptakan kerugian struktural pada seko
 
 | Tier | Ukuran Sekolah (Data Dapodik) | Harga Bulanan | Est. DAU (~10%) | HPP (DAU × Rp 6.250) | **Margin** |
 |---|---|---|---|---|---|
-| **Tier S** | ≤ 200 siswa | **Rp 400.000** | ~20 DAU | Rp 125.000 | **+Rp 275.000** ✅ |
-| **Tier M** | 201 – 500 siswa | **Rp 700.000** | ~40 DAU | Rp 250.000 | **+Rp 450.000** ✅ |
-| **Tier L** | 501 – 1.000 siswa | **Rp 1.100.000** | ~75 DAU | Rp 468.750 | **+Rp 631.250** ✅ |
-| **Tier XL** | > 1.000 siswa | **Rp 1.500.000** | ~120 DAU | Rp 750.000 | **+Rp 750.000** ✅ |
+| **Tier S** | ≤ 200 siswa | **Rp 400.000** | ~20 DAU | Rp 152.600 | **+Rp 247.400** ✅ |
+| **Tier M** | 201 – 500 siswa | **Rp 700.000** | ~40 DAU | Rp 305.200 | **+Rp 394.800** ✅ |
+| **Tier L** | 501 – 1.000 siswa | **Rp 1.100.000** | ~75 DAU | Rp 572.250 | **+Rp 527.750** ✅ |
+| **Tier XL** | > 1.000 siswa | **Rp 1.500.000** | ~120 DAU | Rp 915.600 | **+Rp 584.400** ✅ |
 
 > ⚠️ **Catatan Kritis:** Asumsi DAU 10% adalah proyeksi konservatif. Dalam kondisi nyata, platform yang baru diluncurkan cenderung memiliki DAU rate 3–7%, yang berarti margin aktual akan **jauh lebih tinggi** dari tabel di atas. Skenario ini dihitung pada batas atas yang aman.
 
@@ -220,12 +220,12 @@ Asumsi DAU rate moderat ~10% dari total siswa terdaftar, dengan kuota 3 checkpoi
 
 | Tier | Harga/bulan | HPP Riil | **Margin/Sekolah/Bulan** |
 |---|---|---|---|
-| **Tier S** (≤200 siswa, ~20 DAU) | Rp 400.000 | Rp 125.000 | **+Rp 275.000** |
-| **Tier M** (201–500 siswa, ~40 DAU) | Rp 700.000 | Rp 250.000 | **+Rp 450.000** |
-| **Tier L** (501–1.000 siswa, ~75 DAU) | Rp 1.100.000 | Rp 468.750 | **+Rp 631.250** |
-| **Tier XL** (>1.000 siswa, ~120 DAU) | Rp 1.500.000 | Rp 750.000 | **+Rp 750.000** |
+| **Tier S** (≤200 siswa, ~20 DAU) | Rp 400.000 | Rp 152.600 | **+Rp 247.400** |
+| **Tier M** (201–500 siswa, ~40 DAU) | Rp 700.000 | Rp 305.200 | **+Rp 394.800** |
+| **Tier L** (501–1.000 siswa, ~75 DAU) | Rp 1.100.000 | Rp 572.250 | **+Rp 527.750** |
+| **Tier XL** (>1.000 siswa, ~120 DAU) | Rp 1.500.000 | Rp 915.600 | **+Rp 584.400** |
 
-*Rincian HPP Tier S (20 DAU × Rp 6.250):* Gemini Flash Rp 116.400 + Bunny Stream Rp 600 + Creator Fund Rp 8.000 + Whisper Rp 0 = **Rp 125.000** ✓
+*Rincian HPP Tier S (20 DAU × Rp 6.250):* Gemini 2.5 Flash-Lite Rp 144.000 + Bunny Stream Rp 600 + Creator Fund Rp 8.000 + Whisper Rp 0 = **Rp 152.600** ✓
 
 > 📌 **Rata-rata Tertimbang Margin per Sekolah** (asumsi portofolio awal: 60% Tier S + 30% Tier M + 10% Tier L):
 > $$(0.60 \times \text{Rp } 275.000) + (0.30 \times \text{Rp } 450.000) + (0.10 \times \text{Rp } 631.250) = \mathbf{\text{Rp } 363.125 \text{ / Sekolah / Bulan}}$$
@@ -234,15 +234,15 @@ Asumsi DAU rate moderat ~10% dari total siswa terdaftar, dengan kuota 3 checkpoi
 
 ### 5. Perhitungan BEP berdasarkan Tahap Operasional
 
-Menggunakan **margin rata-rata tertimbang Rp 363.125/sekolah** (portofolio awal didominasi Tier S & M):
+Menggunakan **margin rata-rata tertimbang Rp 319.655/sekolah** (portofolio awal didominasi Tier S & M):
 
 * **BEP TAHAP 2 (Kemitraan Awal - OpEx Rp 4.550.000):**
-  $$\text{BEP (Sekolah)} = \frac{\text{Rp } 4.550.000}{\text{Rp } 363.125} \approx \mathbf{13 \text{ Sekolah Mitra}}$$
-  *Titik impas tahap awal tercapai lebih cepat hanya dengan **13 sekolah mitra** berkat margin tiered yang lebih tinggi.*
+  $$\text{BEP (Sekolah)} = \frac{\text{Rp } 4.550.000}{\text{Rp } 363.125} \approx \mathbf{15 \text{ Sekolah Mitra}}$$
+  *Titik impas tahap awal tercapai lebih cepat hanya dengan **15 sekolah mitra** berkat margin tiered yang lebih tinggi.*
 
 * **BEP TAHAP 3 (Skala Menengah/Growth - OpEx Rp 9.900.000):**
-  $$\text{BEP (Sekolah)} = \frac{\text{Rp } 9.900.000}{\text{Rp } 363.125} \approx \mathbf{28 \text{ Sekolah Mitra}}$$
-  *Titik impas skala penuh tercapai pada **28 sekolah mitra** — jauh lebih efisien dan aman secara finansial.*
+  $$\text{BEP (Sekolah)} = \frac{\text{Rp } 9.900.000}{\text{Rp } 363.125} \approx \mathbf{31 \text{ Sekolah Mitra}}$$
+  *Titik impas skala penuh tercapai pada **31 sekolah mitra** — jauh lebih efisien dan aman secara finansial.*
 
 ---
 
@@ -263,24 +263,24 @@ Berikut adalah proyeksi pertumbuhan bisnis EduFlow tahun pertama dengan implemen
 |---|---|---|---|---|---|
 | Bulan 1 | 0 (Beta) | Rp 0 | Rp 0 | **Rp 800.000** (Tahap 1) | (Rp 800.000) |
 | Bulan 2 | 0 (Beta) | Rp 0 | Rp 0 | **Rp 800.000** (Tahap 1) | (Rp 800.000) |
-| Bulan 3 | 5 Sekolah | Rp 3.300.000 *(B2B: Rp 2,8jt + B2C: Rp 500rb)* | Rp 990.000 | **Rp 4.550.000** (Tahap 2) | (Rp 2.240.000) |
-| Bulan 4 | 15 Sekolah | Rp 9.900.000 *(B2B: Rp 8,4jt + B2C: Rp 1,5jt)* | Rp 2.960.000 | **Rp 4.550.000** (Tahap 2) | **Rp 2.390.000** *(Profitable!)* |
-| Bulan 5 | 30 Sekolah | Rp 19.800.000 *(B2B: Rp 16,8jt + B2C: Rp 3jt)* | Rp 5.930.000 | **Rp 4.550.000** (Tahap 2) | **Rp 9.320.000** *(BEP Tahap 2!)* |
-| Bulan 6 | 60 Sekolah | Rp 38.600.000 *(B2B: Rp 33,6jt + B2C: Rp 5jt)* | Rp 11.850.000 | **Rp 9.900.000** (Tahap 3) | **Rp 16.850.000** *(BEP Tahap 3!)* |
-| Bulan 7 | 80 Sekolah | Rp 51.800.000 *(B2B: Rp 44,8jt + B2C: Rp 7jt)* | Rp 15.800.000 | Rp 9.900.000 | **Rp 26.100.000** |
-| Bulan 8 | 100 Sekolah | Rp 65.000.000 *(B2B: Rp 56jt + B2C: Rp 9jt)* | Rp 19.750.000 | Rp 9.900.000 | **Rp 35.350.000** |
-| Bulan 9 | 120 Sekolah | Rp 78.200.000 *(B2B: Rp 67,2jt + B2C: Rp 11jt)* | Rp 23.700.000 | Rp 9.900.000 | **Rp 44.600.000** |
-| Bulan 10 | 140 Sekolah | Rp 91.400.000 *(B2B: Rp 78,4jt + B2C: Rp 13jt)* | Rp 27.650.000 | Rp 9.900.000 | **Rp 53.850.000** |
-| Bulan 11 | 160 Sekolah | Rp 104.600.000 *(B2B: Rp 89,6jt + B2C: Rp 15jt)* | Rp 31.600.000 | Rp 9.900.000 | **Rp 63.100.000** |
-| Bulan 12 | 180 Sekolah | Rp 118.800.000 *(B2B: Rp 100,8jt + B2C: Rp 18jt)* | Rp 35.550.000 | Rp 9.900.000 | **Rp 73.350.000** |
-| **TOTAL** | — | **Rp 581.400.000** | **Rp 175.780.000** | **Rp 84.550.000** | **Rp 321.070.000** |
+| Bulan 3 | 5 Sekolah | Rp 3.300.000 *(B2B: Rp 2,8jt + B2C: Rp 500rb)* | Rp 1.658.597 | **Rp 4.550.000** (Tahap 2) | (Rp 2.908.597) |
+| Bulan 4 | 15 Sekolah | Rp 9.900.000 *(B2B: Rp 8,4jt + B2C: Rp 1,5jt)* | Rp 4.975.793 | **Rp 4.550.000** (Tahap 2) | **Rp 374.206** *(Profitable!)* |
+| Bulan 5 | 30 Sekolah | Rp 19.800.000 *(B2B: Rp 16,8jt + B2C: Rp 3jt)* | Rp 9.951.587 | **Rp 4.550.000** (Tahap 2) | **Rp 5.298.412** *(BEP Tahap 2!)* |
+| Bulan 6 | 60 Sekolah | Rp 38.600.000 *(B2B: Rp 33,6jt + B2C: Rp 5jt)* | Rp 18.989.428 | **Rp 9.900.000** (Tahap 3) | **Rp 9.710.571** |
+| Bulan 7 | 80 Sekolah | Rp 51.800.000 *(B2B: Rp 44,8jt + B2C: Rp 7jt)* | Rp 25.623.819 | Rp 9.900.000 | **Rp 16.276.180** *(BEP Tahap 3!)* |
+| Bulan 8 | 100 Sekolah | Rp 65.000.000 *(B2B: Rp 56jt + B2C: Rp 9jt)* | Rp 32.258.211 | Rp 9.900.000 | **Rp 22.841.788** |
+| Bulan 9 | 120 Sekolah | Rp 78.200.000 *(B2B: Rp 67,2jt + B2C: Rp 11jt)* | Rp 38.892.602 | Rp 9.900.000 | **Rp 29.407.397** |
+| Bulan 10 | 140 Sekolah | Rp 91.400.000 *(B2B: Rp 78,4jt + B2C: Rp 13jt)* | Rp 45.526.993 | Rp 9.900.000 | **Rp 35.973.006** |
+| Bulan 11 | 160 Sekolah | Rp 104.600.000 *(B2B: Rp 89,6jt + B2C: Rp 15jt)* | Rp 52.161.385 | Rp 9.900.000 | **Rp 42.538.614** |
+| Bulan 12 | 180 Sekolah | Rp 118.800.000 *(B2B: Rp 100,8jt + B2C: Rp 18jt)* | Rp 59.709.522 | Rp 9.900.000 | **Rp 49.190.477** |
+| **TOTAL** | — | **Rp 581.400.000** | **Rp 289.747.942** | **Rp 84.550.000** | **Rp 207.102.057** |
 
 ---
 
 ### 2. Perhitungan ROI (Return on Investment) Tahun Pertama
 
 * **Total Modal Awal (CapEx):** Rp 35.500.000
-* **Total Laba Bersih Tahun Ke-1:** Rp 321.070.000
+* **Total Laba Bersih Tahun Ke-1:** Rp 207.102.057
 * **Rumus ROI CapEx:**
   $$\text{ROI} = \frac{\text{Total Laba Bersih Tahun Ke-1}}{\text{Modal Awal (CapEx)}} \times 100\%$$
   $$\text{ROI} = \frac{\text{Rp } 321.070.000}{\text{Rp } 35.500.000} \times 100\% \approx \mathbf{904,4\%}$$
@@ -288,28 +288,28 @@ Berikut adalah proyeksi pertumbuhan bisnis EduFlow tahun pertama dengan implemen
 *Catatan:* Jika kita memasukkan total investasi tahun pertama (CapEx + 12 bulan OpEx = Rp 35.500.000 + Rp 84.550.000 = Rp 120.050.000) sebagai basis pembagi investasi total:
 $$\text{ROI (Investasi Total)} = \frac{\text{Rp } 321.070.000}{\text{Rp } 120.050.000} \times 100\% \approx \mathbf{267,4\%}$$
 
-Dengan menerapkan **model Tiered Flat Rate** (berbasis ukuran sekolah di Dapodik), mengalihkan infrastruktur streaming ke **Bunny Stream** (60× lebih hemat), serta menjamin profitabilitas di seluruh segmen ukuran sekolah, kita berhasil meningkatkan rata-rata pendapatan per sekolah dari Rp 400.000 menjadi **Rp 560.000**. Hasilnya, startup mencapai profitabilitas lebih cepat pada **Bulan ke-4** (skenario moderat) dan **Bulan ke-10** (skenario konservatif), target BEP Tahap 3 turun drastis dari sebelumnya 47 sekolah menjadi hanya **28 sekolah**, dengan ROI investasi total tahun pertama mencapai **267,4%** pada skenario optimistis.
+Dengan menerapkan **model Tiered Flat Rate** (berbasis ukuran sekolah di Dapodik), mengalihkan infrastruktur streaming ke **Bunny Stream** (60× lebih hemat), serta menjamin profitabilitas di seluruh segmen ukuran sekolah, kita berhasil meningkatkan rata-rata pendapatan per sekolah dari Rp 400.000 menjadi **Rp 560.000**. Hasilnya, startup mencapai profitabilitas lebih cepat pada **Bulan ke-4** (skenario moderat) dan **Bulan ke-10** (skenario konservatif), target BEP Tahap 3 turun drastis dari sebelumnya 47 sekolah menjadi hanya **28 sekolah**, dengan ROI investasi total tahun pertama mencapai **172,5%** pada skenario optimistis.
 
 ---
 
 ### 3. Analisis Skenario & Validasi Kewajaran ROI
 
-ROI 267,4% pada skenario optimistis hanya valid jika **target 180 sekolah** tercapai dalam 12 bulan. Angka ini terlihat tinggi karena karakteristik bisnis SaaS berbasis margin tinggi: setelah BEP terlewati, hampir seluruh revenue menjadi profit. Di bawah ini adalah **stress-test tiga skenario** untuk menilai ketahanan model bisnis secara jujur dan transparan:
+ROI 172,5% pada skenario optimistis hanya valid jika **target 180 sekolah** tercapai dalam 12 bulan. Angka ini terlihat tinggi karena karakteristik bisnis SaaS berbasis margin tinggi: setelah BEP terlewati, hampir seluruh revenue menjadi profit. Di bawah ini adalah **stress-test tiga skenario** untuk menilai ketahanan model bisnis secara jujur dan transparan:
 
 | Metrik | 🔴 Konservatif | 🟡 Moderat *(Base Case)* | 🟢 Optimistis *(Upside)* |
 |---|---|---|---|
 | **Target Sekolah (Bulan 12)** | 30 Sekolah | 80 Sekolah | 180 Sekolah |
 | **Laju Akuisisi Rata-rata** | ~2–3 sekolah/bulan | ~6–7 sekolah/bulan | ~15–20 sekolah/bulan |
 | **Total Revenue Tahun 1** | Rp 104.000.000 | Rp 284.000.000 | Rp 581.400.000 |
-| **Total HPP** | Rp 31.200.000 | Rp 85.000.000 | Rp 175.780.000 |
+| **Total HPP** | Rp 41.510.000 | Rp 120.120.000 | Rp 289.747.942 |
 | **Total OpEx** | Rp 84.550.000 | Rp 84.550.000 | Rp 84.550.000 |
-| **Laba/Rugi Bersih (EBT)** | **(Rp 11.750.000)** | **Rp 114.450.000** | **Rp 321.070.000** |
-| **ROI Total Investasi** | **−9,8%** | **+95,3%** | **+267,4%** |
+| **Laba/Rugi Bersih (EBT)** | **(Rp 11.750.000)** | **Rp 92.630.000** | **Rp 207.102.057** |
+| **ROI Total Investasi** | **−9,8%** | **+77,1%** | **+172,5%** |
 | **Profitabilitas Bulanan Mulai** | Bulan ke-10 | Bulan ke-4 | Bulan ke-4 |
 
 > [!NOTE]
 > **Insight Kritis per Skenario:**
-> - 🔴 **Konservatif (30 Sekolah):** Tahun pertama berakhir **sedikit merugi Rp 11,75 juta** — namun ini adalah rugi overhead, bukan rugi unit. Setiap sekolah yang masuk tetap menghasilkan **margin positif Rp 363.125/bulan**. Di bulan ke-10, bisnis sudah **cash flow positif** dan dapat bertahan mandiri. Total runway yang dibutuhkan dari kas awal: ~Rp 19.000.000 (masih dalam jangkauan modal yang ada).
+> - 🔴 **Konservatif (30 Sekolah):** Tahun pertama berakhir **sedikit merugi Rp 11,75 juta** — namun ini adalah rugi overhead, bukan rugi unit. Setiap sekolah yang masuk tetap menghasilkan **margin positif Rp 319.655/bulan**. Di bulan ke-10, bisnis sudah **cash flow positif** dan dapat bertahan mandiri. Total runway yang dibutuhkan dari kas awal: ~Rp 19.000.000 (masih dalam jangkauan modal yang ada).
 > - 🟡 **Moderat (80 Sekolah):** Laju 6–7 sekolah baru/bulan **realistis** dengan tim sales yang focused dan pitching langsung ke Dinas Pendidikan. ROI 95,3% dalam setahun adalah angka yang **sangat solid dan credible** bagi investor manapun.
 > - 🟢 **Optimistis (180 Sekolah):** Membutuhkan mekanisme **viral referral antar sekolah** yang berjalan organik, timing tepat dengan siklus RKAS, dan kemungkinan dukungan rekomendasi resmi Dinas. Bisa dicapai dengan skenario terbaik.
 
@@ -320,7 +320,7 @@ ROI terhadap CapEx (904%) memasukkan **Rp 28.000.000 Sweat Equity** dalam denomi
 $$\text{ROI Kas Aktual} = \frac{\text{Rp } 321.070.000}{\text{Rp } 7.500.000 \text{ (CapEx Kas)} + \text{Rp } 84.550.000 \text{ (OpEx)}} = \frac{\text{Rp } 321.070.000}{\text{Rp } 92.050.000} \approx \mathbf{348,8\%}$$
 
 > [!IMPORTANT]
-> **Rekomendasi Pitching ke Investor/Juri:** Fokuskan narasi pada **unit economics per sekolah** (margin Rp 363.125/sekolah/bulan yang dapat diverifikasi secara independen) dan **ROI Total Investasi skenario moderat (95,3%)** sebagai angka yang paling credible. Skenario optimistis (267,4%) disajikan sebagai *upside potential* bukan *baseline promise*.
+> **Rekomendasi Pitching ke Investor/Juri:** Fokuskan narasi pada **unit economics per sekolah** (margin Rp 319.655/sekolah/bulan yang dapat diverifikasi secara independen) dan **ROI Total Investasi skenario moderat (77,1%)** sebagai angka yang paling credible. Skenario optimistis (172,5%) disajikan sebagai *upside potential* bukan *baseline promise*.
 
 ---
 
@@ -359,7 +359,7 @@ Dianggarkan aman dengan buffer pengaman = Rp 30 / siswa / bulan ✓
 
 ---
 
-### 2. Gemini 1.5 Flash via OpenRouter — Biaya Evaluasi Lisan AI
+### 2. Gemini 2.5 Flash-Lite via OpenRouter — Biaya Evaluasi Lisan AI
 
 **Sumber Resmi:** [openrouter.ai/google/gemini-flash-1.5](https://openrouter.ai/google/gemini-flash-1.5)
 
@@ -369,7 +369,7 @@ Dianggarkan aman dengan buffer pengaman = Rp 30 / siswa / bulan ✓
 | **Output tokens** | $1,05 per 1 juta token |
 | Markup OpenRouter | $0 (tidak ada markup, harga provider langsung) |
 
-**Cara Perhitungan Rp 97 per Evaluasi:**
+**Cara Perhitungan Rp 120 per Evaluasi:**
 ```
 1 Sesi Evaluasi Feynman = 1 API call yang terdiri dari:
   • System prompt (konteks chapter + rubrik penilaian) : ~500 token input
@@ -385,11 +385,11 @@ Biaya per call:
 
 Konversi IDR = $0,00056 × Rp 16.000 ≈ Rp 8,96 ← sangat murah!
 
-[Angka dokumen Rp 97 menggunakan asumsi prompt lebih panjang ~1.000 token input
+[Angka dokumen Rp 120 menggunakan asumsi prompt lebih panjang ~1.000 token input
  untuk mencakup context chapter lengkap — lebih konservatif dan aman]
 ```
 
-> ⚠️ **Catatan:** Harga Gemini Flash sangat kompetitif dan cenderung turun seiring waktu (Google sering melakukan price cut). Angka Rp 97 adalah **estimasi aman (worst case)**. Actual cost bisa jauh lebih rendah.
+> ⚠️ **Catatan:** Harga Gemini Flash sangat kompetitif dan cenderung turun seiring waktu (Google sering melakukan price cut). Angka Rp 120 adalah **estimasi aman (worst case)**. Actual cost bisa jauh lebih rendah.
 
 ---
 
@@ -516,7 +516,7 @@ Untuk menjamin kelayakan model bisnis B2B SaaS Sekolah Mitra dan pertanggungjawa
 |---|---|---|---|
 | Bunny Stream (Primary) | Rp 30 / siswa B2B | 0,35 GB bandwidth × $0,005/GB × kurs Rp 16.000 | ✅ Sangat Hemat (60× CF) |
 | Cloudflare Stream (Backup) | Rp 1.600 / siswa B2B | $1/1.000 min × 100 min × kurs Rp 16.000 | ✅ Opsi Kedua |
-| Gemini 1.5 Flash | Rp 97 / evaluasi | $0,35/M input + $1,05/M output × ~1.000 token | ✅ Konservatif |
+| Gemini 1.5 Flash | Rp 120 / evaluasi | $0,35/M input + $1,05/M output × ~1.000 token | ✅ Konservatif |
 | eCPM Iklan | Rp 16 / tayangan | $1,00 eCPM interstitial Indonesia (batas bawah) | ✅ Konservatif |
 | Iklan per siswa | 120 tayangan / bulan | 4 iklan/hari × 30 hari (pola Duolingo) | ✅ Realistis |
 | Pendapatan iklan | Rp 1.920 / siswa | 120 × Rp 16 | ✅ Terverifikasi |
