@@ -58,16 +58,16 @@ Siswa umum gratis belajar mandiri diselingi iklan video pendek (eCPM Indonesia r
 
 #### C. Jalur B2C Mandiri Premium (Langganan Tanpa Iklan)
 Siswa umum berlangganan pribadi senilai **Rp 19.999 / bulan** untuk mematikan iklan dan mendapat akses penuh.
-* **HPP Variabel:** **Rp 18.274 / siswa / bulan (Efisien via DOKU QRIS & e-Wallet)**. Rincian HPP riil tanpa data mengambang:
+* **HPP Variabel:** **Rp 18.330 / siswa / bulan (Efisien via DOKU QRIS & e-Wallet)**. Rincian HPP riil tanpa data mengambang:
   - **Payment Gateway (PG) Fee:** **Rp 3.000 / transaksi** (Tarif flat standard transfer bank/VA via payment gateway mitra seperti [Midtrans](https://midtrans.com/pricing) atau [Xendit](https://xendit.co/id/harga/)).
   - **Bagi Hasil Kreator Konten (30%):** 30% x Rp 19.999 = **Rp 6.000 / siswa / bulan** (Dana apresiasi royalti bagi kreator berdasarkan proporsi tayangan video mereka yang ditonton oleh pelanggan premium — mirip dengan skema YouTube Premium).
   - **HPP API & Streaming Video (Tanpa Batasan Kuota / High Usage):**
     - Gemini 2.5 Flash-Lite via OpenRouter (100 checkpoint lisan): 100 x Rp 120 = **Rp 12.000 / siswa / bulan**.
     - Bunny Stream Video (64 tayangan ditonton): Rata-rata 0,35 GB bandwidth × $0,005/GB × kurs Rp 16.000 = Rp 28, dibulatkan **Rp 30 / siswa / bulan**. (Opsi cadangan Cloudflare Stream seharga Rp 1.029).
     - *Sub-Total HPP Penggunaan:* Rp 12.000 + Rp 30 = **Rp 12.030 / siswa / bulan**.
-  - **Total HPP B2C Premium:** Rp 3.000 (PG) + Rp 6.000 (Kreator) + Rp 9.730 (Penggunaan) = **Rp 18.274 / siswa / bulan (Efisien via DOKU QRIS & e-Wallet)** ✓
+  - **Total HPP B2C Premium:** Rp 3.000 (PG) + Rp 6.000 (Kreator) + Rp 9.730 (Penggunaan) = **Rp 18.330 / siswa / bulan (Efisien via DOKU QRIS & e-Wallet)** ✓
 
-> 💡 **Catatan Margin B2C Premium:** Berkat migrasi ke Bunny Stream dan penyesuaian harga ke Rp 19.999, segmen B2C Premium kini menghasilkan keuntungan bersih positif sebesar **+Rp 1.725 / siswa / bulan** (Strategi hemat PG via QRIS/E-wallet saja) — lebih dari 2× lipat dibanding sebelumnya! Ini semakin mengokohkan struktur finansial EduFlow, sementara sumber laba terbesar tetap berada pada segmentasi B2B Sekolah Mitra (margin Rp 212.500/sekolah/bulan).
+> 💡 **Catatan Margin B2C Premium:** Berkat migrasi ke Bunny Stream dan penyesuaian harga ke Rp 19.999, segmen B2C Premium kini menghasilkan keuntungan bersih positif sebesar **+Rp 1.669 / siswa / bulan** (Strategi hemat PG via QRIS/E-wallet saja) — lebih dari 2× lipat dibanding sebelumnya! Ini semakin mengokohkan struktur finansial EduFlow, sementara sumber laba terbesar tetap berada pada segmentasi B2B Sekolah Mitra (margin Rp 212.500/sekolah/bulan).
 
 ---
 
@@ -176,7 +176,7 @@ Model **flat rate tunggal** berpotensi menciptakan kerugian struktural pada seko
 
 **A. Struktur Harga Berjenjang (Tiered Pricing):**
 
-| Tier | Ukuran Sekolah (Data Dapodik) | Harga Bulanan | Est. DAU (~10%) | HPP (DAU × Rp 6.250) | **Margin** |
+| Tier | Ukuran Sekolah (Data Dapodik) | Harga Bulanan | Est. DAU (~10%) | HPP (DAU × Rp 7.630) | **Margin** |
 |---|---|---|---|---|---|
 | **Tier S** | ≤ 200 siswa | **Rp 400.000** | ~20 DAU | Rp 152.600 | **+Rp 247.400** ✅ |
 | **Tier M** | 201 – 500 siswa | **Rp 700.000** | ~40 DAU | Rp 305.200 | **+Rp 394.800** ✅ |
@@ -225,10 +225,10 @@ Asumsi DAU rate moderat ~10% dari total siswa terdaftar, dengan kuota 3 checkpoi
 | **Tier L** (501–1.000 siswa, ~75 DAU) | Rp 1.100.000 | Rp 572.250 | **+Rp 527.750** |
 | **Tier XL** (>1.000 siswa, ~120 DAU) | Rp 1.500.000 | Rp 915.600 | **+Rp 584.400** |
 
-*Rincian HPP Tier S (20 DAU × Rp 6.250):* Gemini 2.5 Flash-Lite Rp 144.000 + Bunny Stream Rp 600 + Creator Fund Rp 8.000 + Whisper Rp 0 = **Rp 152.600** ✓
+*Rincian HPP Tier S (20 DAU × Rp 7.630):* Gemini 2.5 Flash-Lite Rp 144.000 + Bunny Stream Rp 600 + Creator Fund Rp 8.000 + Whisper Rp 0 = **Rp 152.600** ✓
 
 > 📌 **Rata-rata Tertimbang Margin per Sekolah** (asumsi portofolio awal: 60% Tier S + 30% Tier M + 10% Tier L):
-> $$(0.60 \times \text{Rp } 275.000) + (0.30 \times \text{Rp } 450.000) + (0.10 \times \text{Rp } 631.250) = \mathbf{\text{Rp } 363.125 \text{ / Sekolah / Bulan}}$$
+> $$(0.60 \times \text{Rp } 247.400) + (0.30 \times \text{Rp } 394.800) + (0.10 \times \text{Rp } 527.750) = \mathbf{\text{Rp } 319.655 \text{ / Sekolah / Bulan}}$$
 
 ---
 

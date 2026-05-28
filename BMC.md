@@ -12,7 +12,7 @@ block-beta
     columns 5
 
     block:KP:1
-        A["KEY PARTNERS<br/>• Dinas Pendidikan Daerah<br/>• Sekolah Negeri & Kepsek<br/>• Mitra Marketplace SIPLah<br/>• Content Creator Edukasi<br/>• Google (Gemini via OpenRouter)<br/>• RunPod (Whisper Serverless)<br/>• Kemenkumham (PT & HAKI)"]
+        A["KEY PARTNERS<br/>• Dinas Pendidikan Daerah<br/>• Sekolah Negeri & Kepsek<br/>• Mitra Marketplace SIPLah<br/>• Content Creator Edukasi<br/>• Google (Gemini via OpenRouter)<br/>• DOKU (Payment Gateway)<br/>• Tim Engineer/DevOps (Outsource)<br/>• Kemenkumham (PT & HAKI)"]
     end
     block:KAKR:1
         B["KEY ACTIVITIES<br/>• Platform Dev (Laravel, Flutter)<br/>• Operasi Async AI Pipeline<br/>• Sosialisasi & Kemitraan Sekolah<br/>• Kurasi & Insentif Kreator"]
@@ -32,10 +32,10 @@ block-beta
     end
 
     block:COST:3
-        H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (Tim Founder, Legal PT/HAKI via OSS/DJKI)<br/>• COGS/Siswa/Bulan: B2B Rp 6.250, B2C Gratis Rp 1.667, Premium Rp 18.730<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt (Kepatuhan UMK)"]
+        H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (Tim Founder, Legal PT/HAKI via OSS/DJKI)<br/>• COGS/Siswa/Bulan: B2B Rp 7.630, B2C Gratis Rp 1.412, Premium Rp 18.330<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt (Kepatuhan UMK)"]
     end
     block:REV:2
-        I["REVENUE STREAMS<br/>• B2B SaaS Flat Rate: Rp 400rb/sekolah/bulan (BOS via SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan (eCPM Rp 16)<br/>• B2C Premium: Rp 19.999/siswa/bulan (Tanpa Iklan)<br/>• Virtual Gifting (Engagement Engine)"]
+        I["REVENUE STREAMS<br/>• B2B SaaS Tiered Rate: Rp 400rb-1,5jt/sekolah/bulan (BOS SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan (eCPM Rp 16)<br/>• B2C Premium: Rp 19.999/siswa/bulan (Tanpa Iklan)<br/>• Virtual Gifting (Engagement Engine)"]
     end
 ```
 
@@ -185,8 +185,8 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | **Model Monetisasi** | Iklan video pendek interstitial (eCPM estimasi regional Rp 16 per tayangan) |
 | **Kuota Layanan** | Batasan 15 checkpoint evaluasi AI per bulan |
 | **Pendapatan per Siswa** | ~Rp 1.920 / bulan (berdasarkan rata-rata 120 tayangan iklan per siswa) |
-| **HPP per Siswa** | **Rp 1.667 / siswa / bulan** (Rincian: Gemini Flash Rp 1.455 + Bunny Video Rp 12 + RPM Rp 200) |
-| **Surplus Bersih** | **+Rp 253 / siswa / bulan** (pengguna non-bayar kini menghasilkan surplus 10× lipat lebih besar!) |
+| **HPP per Siswa** | **Rp 1.412 / siswa / bulan** (Rincian: Gemini 2.5 Flash-Lite Rp 1.200 + Bunny Video Rp 12 + RPM Rp 200) |
+| **Surplus Bersih** | **+Rp 508 / siswa / bulan** (Pengguna gratis mandiri menyumbang profit kecil dari selisih RPM dan efisiensi API) |
 
 ### Stream 3: B2C Premium Subscription (High Margin)
 
@@ -194,7 +194,7 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 |---|---|
 | **Harga** | **Rp 19.999 / siswa / bulan** |
 | **Benefit** | Bebas iklan, akses tanpa batas ke evaluasi AI, dan fitur belajar eksklusif |
-| **HPP** | **Rp 18.730 / siswa / bulan** (Breakdown: Rp 3.000 PG [Midtrans/Xendit] + Rp 6.000 Kreator 30% + Rp 9.730 API Gemini/Bunny Stream) |
+| **HPP** | **Rp 18.330 / siswa / bulan** (Breakdown: Rp 300 PG [DOKU QRIS] + Rp 6.000 Kreator 30% + Rp 12.030 API/Bunny Stream) |
 
 ### Stream 4: Virtual Gifting ("Saweran Pintar") - Non-Paid Engagement Engine
 
@@ -208,9 +208,9 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | Indikator Keuangan | Nilai Target |
 |---|---|
 | **Total Revenue Tahun 1** | **Rp 581.400.000** |
-| **Total Laba Bersih (EBT) Tahun 1** | **Rp 321.070.000** |
-| **ROI terhadap CapEx** | **904,4%** |
-| **ROI terhadap Total Investasi** | **267,4%** |
+| **Total Laba Bersih (EBT) Tahun 1** | **Rp 207.102.057** |
+| **ROI terhadap CapEx** | **583,4%** |
+| **ROI terhadap Total Investasi** | **172,5%** |
 | **Target Sekolah Mitra (Bulan 12)** | 180 sekolah aktif |
 
 ---
@@ -233,7 +233,7 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | **Mobile** | Flutter 3.x (Dart) | Antarmuka berkinerja tinggi (60 FPS) dengan satu basis kode untuk Android & iOS |
 | **Web Admin** | Next.js 14 (TypeScript) | Struktur rendering cepat untuk data analitik kognitif guru yang masif |
 | **AI - STT** | Self-Hosted Whisper (model base/tiny) | Mengurangi biaya operasional transkripsi menjadi Rp 0 (Zero Cost STT) |
-| **AI - LLM** | Gemini 1.5 Flash via OpenRouter | Biaya operasional sangat rendah (~Rp 97 per evaluasi) dengan performa andal |
+| **AI - LLM** | Gemini 1.5 Flash via OpenRouter | Biaya operasional sangat rendah (~Rp 120 per evaluasi) dengan performa andal |
 | **Video Hosting** | **Bunny Stream (Primary)** + Cloudflare Stream (Failover) + Local Caching | Bunny Stream 60× lebih hemat daripada skema per-menit; Cloudflare bertindak sebagai failover otomatis |
 
 ### C. Sumber Daya Manusia
@@ -295,6 +295,8 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | **Sekolah Negeri & Kepala Sekolah** | Pengguna B2B dan validator lapangan | Menghilangkan hambatan pemasaran individual ke siswa (bulk acquisition) |
 | **Content Creator Edukasi** | Penyedia konten kurikulum terkurasi | Efisiensi biaya produksi materi ajar dan keragaman variasi instruktur |
 | **Google & OpenRouter** | Penyedia infrastruktur komputasi kognitif | Efisiensi biaya pemrosesan evaluasi lisan via API |
+| **DOKU (Payment Gateway)** | Saluran pembayaran (QRIS & e-Wallet) | Menekan potongan admin B2C Premium menjadi Rp 150-300 per transaksi |
+| **Tim Engineer & DevOps (Outsource)** | Pemeliharaan dan Skalabilitas Server | Menjamin *uptime* server 99.9% saat *traffic* meledak dari ratusan sekolah tanpa membebani *Founder* |
 | **Bunny.net (Bunny Stream)** | Penyedia infrastruktur video streaming utama (Primary) | Biaya per-GB paling efisien — 60× lebih hemat dari Cloudflare Stream, transcoding gratis |
 | **PT Perorangan & Pendaftaran HAKI** | Legalitas dan perlindungan kekayaan intelektual | Keabsahan hukum untuk melakukan transaksi formal dengan anggaran pemerintah (BOS) |
 
@@ -334,11 +336,11 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | Komponen Biaya | B2B Sekolah | B2C Gratis | B2C Premium |
 |---|---|---|---|
 | Transkripsi Suara (Whisper Lokal) | Rp 0 | Rp 0 | Rp 0 |
-| LLM Evaluation (Gemini 1.5 Flash) | Rp 5.820 (Asumsi 60 checkpoint) | ~Rp 1.455 (Asumsi 15 checkpoint) | Rp 9.700 (Asumsi 100 checkpoint) |
+| LLM Evaluation (Gemini 2.5 Flash-Lite) | Rp 7.200 (Asumsi 60 checkpoint) | ~Rp 1.200 (Asumsi 10 checkpoint gratis) | Rp 12.000 (Asumsi 100 checkpoint) |
 | Bandwidth Video (Bunny Stream) | Rp 30 | Rp 12 | Rp 30 (Asumsi 64 mnt) |
-| Payment Gateway Fee (VA/Bank) | Rp 0 (Diserap SIPLah) | Rp 0 (Gratis) | Rp 3.000 (Flat Midtrans/Xendit) |
+| Payment Gateway Fee (VA/Bank) | Rp 0 (Diserap SIPLah) | Rp 0 (Gratis) | Rp 300 (DOKU QRIS/e-Wallet) |
 | Bagi Hasil Kreator (Creator Fund / Royalty Pool) | Rp 400 | Rp 200 | Rp 6.000 (30% B2C Premium) |
-| **Total HPP / siswa / bulan** | **Rp 6.250** | **Rp 1.667** | **Rp 18.730** |
+| **Total HPP / siswa / bulan** | **Rp 7.630** | **Rp 1.412** | **Rp 18.330** |
 
 ### C. Pengeluaran Operasional Bulanan (OpEx)
 
@@ -364,16 +366,16 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 BEP Tahap 2 (Target Kontrak Kemitraan Awal):
 ─────────────────────────────────────────────────────────────
 Model: Tiered Flat Rate (S/M/L/XL) berbasis Data Dapodik
-Margin Rata-rata Tertimbang: Rp 363.125/sekolah
-(komposisi: 60% Tier S Rp 275k + 30% Tier M Rp 450k + 10% Tier L Rp 631k)
+Margin Rata-rata Tertimbang: Rp 319.655/sekolah
+(komposisi: 60% Tier S Rp 247k + 30% Tier M Rp 394k + 10% Tier L Rp 527k)
 OpEx Bulanan: Rp 4.550.000
-Target BEP: Rp 4.550.000 / Rp 363.125 = 13 Sekolah Mitra
+Target BEP: Rp 4.550.000 / Rp 319.655 = 15 Sekolah Mitra
 Estimasi Pencapaian: Bulan ke-4
 
 BEP Tahap 3 (Target Skala Ekspansi):
 ─────────────────────────────────────────────────────────────
 OpEx Bulanan: Rp 9.900.000
-Target BEP: Rp 9.900.000 / Rp 363.125 = 28 Sekolah Mitra
+Target BEP: Rp 9.900.000 / Rp 319.655 = 31 Sekolah Mitra
 Estimasi Pencapaian: Bulan ke-5
 
 Proyeksi Arus Kas Tahun Pertama (Avg Revenue B2B: Rp 560.000/sekolah):
@@ -391,7 +393,7 @@ Bulan  Sekolah  Revenue          Laba Bersih        Status Operasional
   11   160      Rp 104.600.000   Rp 63.100.000      Skala Ekspansi
   12   180      Rp 118.800.000   Rp 73.350.000      Kinerja Akhir Tahun
 ─────  ───────  ───────────────  ─────────────────  ──────────────────
-TOTAL  180      Rp 581.400.000   Rp 321.070.000     ROI Total Investasi 267,4%
+TOTAL  180      Rp 581.400.000   Rp 207.102.057     ROI Total Investasi 172,5%
 
 ### Parit Kompetitif (Competitive Moat)
 
@@ -400,7 +402,7 @@ mindmap
   root((EduFlow MOAT))
     Teknologi
       Self-Hosted Whisper Rp 0
-      Gemini Flash Rp 97/hit
+      Gemini Flash Rp 120/hit
       Algoritma Content Score
       Delete-on-Transcribe Privacy
     Perilaku
@@ -472,7 +474,7 @@ graph TD
 | **Key Resources** | Algoritma Content Score, pipeline transkripsi lokal + Gemini LLM, efisiensi tim developer berpasangan |
 | **Key Activities** | Siklus rilis produk cepat (5 minggu), kemitraan strategis dinas pendidikan, operasional AI asinkron |
 | **Key Partners** | Dinas Pendidikan, Kepala Sekolah mitra, kontributor kreator, Google AI, **Bunny.net (Video CDN Primary)**, Cloudflare (Failover CDN) |
-| **Cost Structure** | CapEx total Rp 35.500.000 (Sweat Equity Rp 28jt + Cash Rp 7.5jt), COGS/siswa B2B Rp 6.250, OpEx ekspansi Rp 9.900.000/bln |
+| **Cost Structure** | CapEx total Rp 35.500.000 (Sweat Equity Rp 28jt + Cash Rp 7.5jt), COGS/siswa B2B Rp 7.630, OpEx ekspansi Rp 9.900.000/bln |
 
 ---
 
@@ -486,15 +488,15 @@ graph TD
 | Pengeluaran Modal (CapEx) | Rp 35.500.000 | Rp 35.500.000 | Sesuai |
 | Model Harga B2B | Tiered: S Rp 400k / M Rp 700k / L Rp 1,1jt / XL Rp 1,5jt | Tiered: S Rp 400k / M Rp 700k / L Rp 1,1jt / XL Rp 1,5jt | Sesuai |
 | Avg Revenue B2B per Sekolah | Rp 560.000/bln (weighted avg) | Rp 560.000/bln (weighted avg) | Sesuai |
-| Estimasi COGS B2B/Siswa | Rp 6.250/bln | Rp 6.250/bln | Sesuai |
-| Margin Rata-rata per Sekolah | Rp 363.125/bln (weighted avg) | Rp 363.125/bln (weighted avg) | Sesuai |
-| Kebutuhan BEP Tahap 2 | 13 Sekolah | 13 Sekolah | Sesuai |
-| Kebutuhan BEP Tahap 3 | 28 Sekolah | 28 Sekolah | Sesuai |
+| Estimasi COGS B2B/Siswa | Rp 7.630/bln | Rp 7.630/bln | Sesuai |
+| Margin Rata-rata per Sekolah | Rp 319.655/bln (weighted avg) | Rp 319.655/bln (weighted avg) | Sesuai |
+| Kebutuhan BEP Tahap 2 | 15 Sekolah | 15 Sekolah | Sesuai |
+| Kebutuhan BEP Tahap 3 | 31 Sekolah | 31 Sekolah | Sesuai |
 | Proyeksi Omzet Tahun ke-1 | Rp 581.400.000 | Rp 581.400.000 | Sesuai |
-| Proyeksi Laba Bersih (EBT) | Rp 321.070.000 | Rp 321.070.000 | Sesuai |
-| ROI terhadap CapEx | 904,4% | 904,4% | Sesuai |
-| Metrik ROI Total Investasi | 267,4% | 267,4% | Sesuai |
-| Asumsi Biaya LLM/Evaluasi | Rp 97 | Rp 97 | Sesuai |
+| Proyeksi Laba Bersih (EBT) | Rp 207.102.057 | Rp 207.102.057 | Sesuai |
+| ROI terhadap CapEx | 583,4% | 583,4% | Sesuai |
+| Metrik ROI Total Investasi | 172,5% | 172,5% | Sesuai |
+| Asumsi Biaya LLM/Evaluasi | Rp 120 | Rp 120 | Sesuai |
 | Tarif Premium Siswa B2C | Rp 19.999/bln | Rp 19.999/bln | Sesuai |
 | Alokasi OpEx Tahap 1 | Rp 800.000/bln | Rp 800.000/bln | Sesuai |
 | Alokasi OpEx Tahap 3 | Rp 9.900.000/bln | Rp 9.900.000/bln | Sesuai |

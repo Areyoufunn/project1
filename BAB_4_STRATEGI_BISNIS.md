@@ -21,7 +21,7 @@ Sumber pendapatan EduFlow terbagi menjadi dua pilar utama:
 *   **Free Tier (Ad-Supported):** Siswa menggunakan EduFlow secara gratis tanpa batas. Monetisasi dilakukan melalui penyisipan iklan *rewarded video* setiap 5 kali percobaan evaluasi suara (*Feynman AI*). 
 *   **Premium Tier:** Pengguna dapat membayar biaya langganan sebesar **Rp 240.000 / tahun** untuk pengalaman bebas iklan, prioritas server LLM yang lebih cepat, dan laporan evaluasi yang lebih mendalam.
 
-*(Masukkan Gambar Business Model Canvas / BMC Anda di Sini)*
+> **Catatan:** Detail lengkap 9 Blok *Business Model Canvas* (BMC), termasuk struktur kemitraan *Outsourced Engineers* dan perhitungan harga pokok, dapat dilihat pada dokumen lampiran: **[BUSINESS MODEL CANVAS (BMC)](file:///c:/laragon/www/project1/BMC.md)**.
 
 ---
 
