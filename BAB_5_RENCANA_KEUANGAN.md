@@ -67,11 +67,20 @@ EduFlow menerapkan sistem harga berjenjang (*Tiered Flat Rate*) yang mengindeks 
 
 Berdasarkan komposisi portofolio awal yang didominasi sekolah menengah (60% Tier S, 30% Tier M, 10% Tier L), rata-rata tertimbang pendapatan per sekolah adalah **Rp 560.000/bulan** dengan **margin bersih Rp 319.655/sekolah/bulan**. Angka ini tidak pernah negatif di seluruh tier, artinya setiap kontrak sekolah yang masuk pasti menguntungkan. Beban biaya EduFlow terhadap total anggaran Dana BOS sekolah hanya berkisar **1,36% hingga 2,18%** — jauh di bawah ambang batas pengadaan teknologi sekolah.
 
+#### 🛡️ Token Guard System: Perlindungan Kas Terhadap Risiko "Success Disaster"
+Jika sebuah sekolah sangat aktif menggunakan platform (DAU meningkat s.d. 70% dengan penggunaan intensif *Feynman AI* hingga 6x per hari), EduFlow memiliki risiko peningkatan biaya API Gemini yang dapat memicu kerugian operasional. Untuk melindungi margin sambil mempertahankan pengalaman pengguna tanpa gangguan iklan saat menonton video, EduFlow menerapkan **Token Guard System**:
+1. **Kuota Harian & Bulanan Sekolah (BOSP Covered):** Lisensi flat-rate B2B menanggung kuota standar **3x evaluasi Feynman AI per hari per siswa** dengan batas kumulatif **60 sesi per bulan per siswa** (bebas digunakan kapan saja, termasuk pada hari libur dan akhir pekan). Ini setara dengan kebutuhan asesmen harian normal.
+2. **Sistem Ad-Lock (Rewarded Ads) untuk Akses Ekstra:** Jika siswa telah menghabiskan kuota bulanan sekolah (60 sesi) atau melebihi batas harian (3x per hari), platform mengaktifkan mode *Ad-Lock*. Siswa cukup menonton **1 Rewarded Video Ad (15 detik)** untuk membuka sesi Feynman tambahan.
+
+
+   * *Analisis Finansial:* Biaya API 1 sesi Feynman adalah **Rp 120**, sedangkan eCPM Rewarded Ads di Indonesia berkisar Rp 120.000 s.d. Rp 160.000 (**Rp 120 - Rp 160 per tayangan**). Dengan demikian, kelebihan penggunaan dibiayai penuh oleh iklan dengan profit bersih positif (**+Rp 30/sesi**). Tidak ada iklan programmatic sama sekali ketika siswa melakukan *scrolling* video belajar demi menjaga kenyamanan maksimal (*UX Comfort*).
+
 ### B. Jalur B2C — Pengguna Mandiri (Siswa & Orang Tua)
 
 Siswa di luar sekolah mitra dapat mengakses EduFlow secara mandiri melalui dua opsi:
 
-**Model Gratis Didukung Iklan (*Ad-Supported*).** Siswa mendapatkan akses penuh tanpa membayar sepeser pun. Sebagai gantinya, platform menyisipkan iklan video singkat (*interstitial*) dengan estimasi pendapatan **Rp 1.920/siswa/bulan** (berdasarkan eCPM konservatif Rp 16 per tayangan dari 120 tayangan per bulan). Karena HPP siswa gratis hanya Rp 1.412/bulan, segmen ini menghasilkan **surplus bersih +Rp 508 per pengguna gratis per bulan** — menjadikan basis pengguna organik sebagai aset yang menguntungkan, bukan beban.
+**Model Gratis Didukung Iklan (*Ad-Supported*).** Siswa mendapatkan akses belajar gratis tanpa ada iklan sama sekali ketika melakukan *scrolling* video belajar demi menjaga kenyamanan pengguna (*UX Comfort*). Sebagai gantinya, akses gratis fitur *Feynman AI* sepenuhnya berbasis **Ad-Lock** (siswa menonton 1 Rewarded Video Ad untuk setiap sesi latihan lisan). Dengan eCPM Rp 150.000 (Rp 150 per tayangan) dan rata-rata 10 sesi Feynman per siswa per bulan, platform menghasilkan pendapatan **Rp 1.500/siswa/bulan**. Karena HPP siswa gratis hanya Rp 1.412/bulan, segmen ini menghasilkan **surplus bersih +Rp 88 per pengguna gratis per bulan** — menjadikan basis pengguna organik tetap menguntungkan secara unit economics.
+
 
 **Model Premium (Berlangganan).** Siswa yang menginginkan pengalaman belajar tanpa gangguan iklan dan akses tanpa batas kuota dapat berlangganan dengan harga terjangkau **Rp 19.999/bulan**. Margin bersih dari setiap pelanggan Premium adalah **+Rp 1.669/siswa/bulan** setelah dipotong HPP Rp 18.330 (termasuk bagi hasil kreator 30%).
 

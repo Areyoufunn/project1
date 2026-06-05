@@ -36,3 +36,26 @@ Selain itu, kami menerapkan pendekatan *bottom-up* dengan memberikan akses *tria
 **2. Akuisisi & Retensi Siswa (B2C): Membajak UI/UX Gen-Z**
 Setelah sekolah melanggan (atau siswa mengunduh sendiri), tantangannya adalah retensi. EduFlow memecahkan masalah kebosanan belajar dengan "membajak" desain antarmuka *scrollable vertical video* yang sudah sangat akrab di otak Gen Z (seperti TikTok). 
 Evaluasi kognitif digamifikasi menggunakan *Feynman AI*, di mana siswa ditantang untuk berbicara ke mikrofon layaknya mengobrol dengan tutor, bukan mengisi pilihan ganda. Efek viralitas (*Word-of-Mouth*) antar siswa juga dipacu melalui fitur *Leaderboard* (klasemen) pengalaman belajar antar sekolah.
+
+
+
+
+quadrantChart
+    title Peta Positioning Kompetitor EduFlow
+    x-axis Pembelajaran Pasif --> Pembelajaran Aktif
+    y-axis Mahal dan Eksklusif --> Terjangkau dan Inklusif
+    
+    quadrant-1 ZONA EDUFLOW
+    quadrant-2 Solusi Gratis dan Hiburan
+    quadrant-3 EdTech Tradisional
+    quadrant-4 Niche AI Premium
+    
+    EduFlow: [0.85, 0.85]
+    Revyze Global: [0.65, 0.70]
+    Feynman AI: [0.80, 0.20]
+    StudyLabAI: [0.70, 0.30]
+    Ruangguru / Zenius: [0.25, 0.25]
+    Google Classroom: [0.35, 0.80]
+    LMS Moodle: [0.25, 0.75]
+    Bimbel Fisik: [0.30, 0.15]
+    TikTok / Shorts: [0.10, 0.90]

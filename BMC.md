@@ -35,7 +35,7 @@ block-beta
         H["COST STRUCTURE<br/>• CapEx Rp 35.5jt (Tim Founder, Legal PT/HAKI via OSS/DJKI)<br/>• COGS/Siswa/Bulan: B2B Rp 7.630, B2C Gratis Rp 1.412, Premium Rp 18.330<br/>• OpEx Bulanan Staged: T1 Rp 800k, T2 Rp 4.55jt, T3 Rp 9.9jt (Kepatuhan UMK)"]
     end
     block:REV:2
-        I["REVENUE STREAMS<br/>• B2B SaaS Tiered Rate: Rp 400rb-1,5jt/sekolah/bulan (BOS SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.920/siswa/bulan (eCPM Rp 16)<br/>• B2C Premium: Rp 19.999/siswa/bulan (Tanpa Iklan)<br/>• Virtual Gifting (Engagement Engine)"]
+        I["REVENUE STREAMS<br/>• B2B SaaS Tiered Rate: Rp 400rb-1,5jt/sekolah/bulan (BOS SIPLah)<br/>• B2C Ad-Supported: ~Rp 1.500/siswa/bulan (Feynman Ad-Lock)<br/>• B2C Premium: Rp 19.999/siswa/bulan (Tanpa Iklan)<br/>• Virtual Gifting (Engagement Engine)"]
     end
 ```
 
@@ -182,11 +182,11 @@ EduFlow menggunakan Model Bisnis Hibrida (Hybrid Revenue Model) untuk memaksimal
 | Parameter | Nilai |
 |---|---|
 | **Harga untuk Siswa** | **Rp 0 (Akses gratis terdukung iklan)** |
-| **Model Monetisasi** | Iklan video pendek interstitial (eCPM estimasi regional Rp 16 per tayangan) |
-| **Kuota Layanan** | Batasan 15 checkpoint evaluasi AI per bulan |
-| **Pendapatan per Siswa** | ~Rp 1.920 / bulan (berdasarkan rata-rata 120 tayangan iklan per siswa) |
+| **Model Monetisasi** | Rewarded Video Ads via Ad-Lock khusus pada fitur Feynman AI (Tanpa ada iklan sama sekali saat scroll video pelajaran demi kenyamanan user) |
+| **Kuota Layanan** | Kuota gratis Feynman AI diatur via Ad-Lock (Siswa menonton 1 Rewarded Video Ad untuk membuka setiap sesi latihan lisan) |
+| **Pendapatan per Siswa** | ~Rp 1.500 / bulan (berdasarkan rata-rata 10 sesi latihan Feynman / 10 tayangan Rewarded Ads dengan eCPM Rp 150.000) |
 | **HPP per Siswa** | **Rp 1.412 / siswa / bulan** (Rincian: Gemini 2.5 Flash-Lite Rp 1.200 + Bunny Video Rp 12 + RPM Rp 200) |
-| **Surplus Bersih** | **+Rp 508 / siswa / bulan** (Pengguna gratis mandiri menyumbang profit kecil dari selisih RPM dan efisiensi API) |
+| **Surplus Bersih** | **+Rp 88 / siswa / bulan** (Pengguna gratis mandiri menyumbang profit bersih positif dari eCPM iklan rewarded yang lebih tinggi) |
 
 ### Stream 3: B2C Premium Subscription (High Margin)
 
