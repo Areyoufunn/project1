@@ -1,11 +1,30 @@
-# Bab Proposal & Analisis Keuangan
+# Ignore folders
+.agent/
+admin/
+backend/
+mobile/
+wireframes/
+
+# Ignore Python helper scripts
+*.py
+
+# Ignore proposal chapters & other markdown documents
 BAB_4_STRATEGI_BISNIS.md
 BAB_5_RENCANA_KEUANGAN.md
 BAB_6_RENCANA_IMPLEMENTASI.md
 BAB_7_PENUTUP.md
-PROYEKSI_KEUANGAN_LENGKAP.md
-ANALISIS_DAU_DAN_SOLUSI_TOKEN.md
-ROI_PROYEKSI_5_TAHUN.md
-
-# Agent cache
-.agent/
+ANALISIS_PASAR.md
+API.md
+BMC.md
+COMPETITOR_ANALYSIS.md
+CONVENTION.md
+ERD.md
+MARKET_SIZE.md
+SETUP.md
+SPRINT.md
+SWOT.md
+TABEL_KOMPETITOR.md
+TECHSTACK.md
+WIREFRAME.md
+markdown.md
+revenue_mitra_brand.md
