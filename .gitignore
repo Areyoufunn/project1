@@ -3,6 +3,7 @@
 admin/
 backend/
 mobile/
+proposal/
 wireframes/
 
 # Ignore Python helper scripts
